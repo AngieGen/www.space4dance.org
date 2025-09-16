@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space4dance - Dance Competitions Platform</title>
+    <script
+      src="https://kit.fontawesome.com/7c7471db46.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#hero" class="logo">
+          <img src="media/S4D-8.png" alt="Space4dance" />
+        </a>
+        <ul class="nav-links">
+          <li class="nav-item"><a href="#hero" class="active">Home</a></li>
+          <li class="nav-item"><a href="#events-section">Events</a></li>
+          <li class="nav-item">
+            <a href="#projects-section" class="dropdown-toggle">
+              Projects <span class="dropdown-arrow">▼</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="europestage/europestage.html">Europestage</a>
+              <a href="worldofdancelatvia/worldofdancelatvia.html"
+                >World of Dance Latvia</a
+              >
+            </div>
+          </li>
+          <li class="nav-item"><a href="#about-section">About</a></li>
+          <li class="nav-item"><a href="#contacts-section">Contacts</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="mobile-close">×</div>
+      <div class="mobile-nav-links">
+        <a href="#hero" class="active">Home</a>
+        <a href="#events-section">Events</a>
+        <div class="mobile-dropdown">
+          <div class="mobile-dropdown-toggle">
+            Projects <span class="dropdown-arrow">▼</span>
+          </div>
+          <div class="mobile-dropdown-menu">
+            <a href="europestage/europestage.html">Europestage</a>
+            <a href="worldofdancelatvia/worldofdancelatvia.html"
+              >World of Dance Latvia</a
+            >
+          </div>
+        </div>
+        <a href="#about-section">About</a>
+        <a href="#contacts-section">Contacts</a>
+      </div>
+    </div>
+
+    <!-- Hero Section with Carousel -->
+    <section id="hero" class="hero">
+      <div class="carousel-container">
+        <!-- Slide 1: SPACE4DANCE-->
+        <div
+          class="carousel-slide slide-europestage-space active"
+          data-event="EUROPESTAGE"
+        >
+          <div class="hero-content">
+            <h1 class="event-title active">SPACE4DANCE</h1>
+            <p class="event-subtitle">
+              We are not just dance competitions - we are the platform for your
+              growth!
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 2: EUROPESTAGE RIGA-->
+        <div
+          class="carousel-slide slide-europestage-riga"
+          data-event="EUROPESTAGE"
+        >
+          <div class="hero-content">
+            <h1 class="event-title">EUROPESTAGE RIGA 2026</h1>
+            <p class="event-subtitle">
+              Dance with Europe's best, celebrate like never before! Riga calls!
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 3: EUROPESTAGE TURKEY-->
+        <div
+          class="carousel-slide slide-europestage-turkey"
+          data-event="EUROPESTAGE"
+        >
+          <div class="hero-content">
+            <h1 class="event-title">EUROPESTAGE Türkiye 2026</h1>
+            <p class="event-subtitle">
+              Make memories that last a lifetime! Compete, celebrate, and
+              explore Antalya!
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 4: World of Dance Latvia -->
+        <div
+          class="carousel-slide slide-wod-latvia"
+          data-event="World of Dance Latvia"
+        >
+          <div class="hero-content">
+            <h1 class="event-title">World of Dance Latvia</h1>
+            <p class="event-subtitle">
+              Your journey starts at Championship Series Latvia! Win and qualify
+              for America!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+      <div id="projects-section" class="projects-container">
+        <div class="projects-grid">
+          <!-- Europestage Card -->
+          <div class="project-card" data-project="europestage">
+            <div class="video-container">
+              <video
+                class="project-video"
+                muted
+                loop
+                playsinline
+                preload="auto"
+                autoplay
+              >
+                <source src="media/es2.mp4" type="video/mp4" />
+                <!-- Placeholder for actual video -->
+              </video>
+              <div class="video-overlay"></div>
+            </div>
+            <div class="card-content">
+              <h3 class="project-title">EUROPESTAGE</h3>
+              <p class="project-description">Upcoming events:</p>
+
+              <div class="project-details">
+                <span class="project-location">Riga, Latvia</span>
+                <span class="project-date">1.03.2026</span>
+              </div>
+
+              <div class="project-details" style="margin-top: 10px">
+                <span class="project-location">Belek, Türkiye</span>
+                <span class="project-date">30.04.- 6.05.2026</span>
+              </div>
+            </div>
+            <a href="europestage/europestage.html" class="card-link"></a>
+          </div>
+
+          <!-- World of Dance Latvia Card -->
+          <div class="project-card" data-project="wod-latvia">
+            <div class="video-container">
+              <video
+                class="project-video"
+                muted
+                loop
+                playsinline
+                preload="auto"
+                autoplay
+              >
+                <source src="media/wodLV.mp4" type="video/mp4" />
+                <!-- Placeholder for actual video -->
+              </video>
+              <div class="video-overlay"></div>
+            </div>
+            <div class="card-content">
+              <h3 class="project-title">World of Dance Latvia</h3>
+              <p class="project-description">Upcoming events:</p>
+              <div class="project-details">
+                <span class="project-location">Riga, Latvia</span>
+                <span class="project-date">23.05.2026</span>
+              </div>
+            </div>
+            <a
+              href="worldofdancelatvia/worldofdancelatvia.html"
+              class="card-link"
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Statistics section-->
+    <section class="stats-section">
+      <div class="stats-container">
+        <div class="stats-grid">
+          <div class="stat-item" data-target="9">
+            <div class="stat-number" data-count="9">0</div>
+            <div class="stat-label">Years of proven success</div>
+          </div>
+
+          <div class="stat-item" data-target="20000">
+            <div class="stat-number" data-count="20000">0</div>
+            <div class="stat-label">Awards presented</div>
+          </div>
+
+          <div class="stat-item" data-target="25000">
+            <div class="stat-number" data-count="25000">0</div>
+            <div class="stat-label">Delighted dancers</div>
+          </div>
+
+          <div class="stat-item" data-target="30000">
+            <div class="stat-number" data-count="30000">0</div>
+            <div class="stat-label">Visitors at our events</div>
+          </div>
+        </div>
+        <div class="stats-header">
+          <h2 class="stats-title">YES, IT'S ALL ABOUT US:</h2>
+          <p class="stats-subtitle">
+            Our numbers speak for themselves - years of dedication, thousands of
+            dancers, and countless unforgettable moments.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events-section" class="events-section">
+      <div class="events-container">
+        <div class="events-grid">
+          <!-- Europestage Event -->
+          <div class="event-card europestage">
+            <div class="event-image">
+              <div class="event-date-badge">
+                <div class="date-month">Mar</div>
+                <div class="date-day">1</div>
+              </div>
+              <div class="event-status"></div>
+            </div>
+
+            <div class="event-content">
+              <div class="event-category">International Dance Contest</div>
+              <h3 class="event-title-info">Europestage Riga 2026</h3>
+
+              <div class="event-details">
+                <div class="event-detail">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span> Ķīpsalas iela 8, Riga, Latvia</span>
+                </div>
+                <div class="event-detail">
+                  <i class="fas fa-clock"></i>
+                  <span>Sunday, March 1st, 2026 • </span>
+                </div>
+              </div>
+
+              <div class="spots-section">
+                <div class="spots-label">Available spots</div>
+                <div class="spots-number" data-spots="200">200</div>
+
+                <div class="countdown-section">
+                  <div class="countdown-label">Registration closes in</div>
+                  <div
+                    class="countdown-timer"
+                    data-target="2026-01-06T23:59:59"
+                  >
+                    <div class="countdown-item">
+                      <div class="countdown-number days">--</div>
+                      <div class="countdown-label-small">Days</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                      <div class="countdown-number hours">--</div>
+                      <div class="countdown-label-small">Hours</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                      <div class="countdown-number minutes">--</div>
+                      <div class="countdown-label-small">Min</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                      <div class="countdown-number seconds">--</div>
+                      <div class="countdown-label-small">Sec</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-actions">
+                <a href="#register-europestage-riga" class="btn btn-primary"
+                  >Participate</a
+                >
+                <a href="europestage/riga.html" class="btn btn-secondary"
+                  >View Details</a
+                >
+              </div>
+
+              <div class="spots-info">
+                <div class="spots-available">Limited Spots</div>
+                <div class="registration-status">
+                  <div class="status-dot"></div>
+                  <span>Registration Open</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Europestage Turkey Event -->
+          <div class="event-card europestage turkey">
+            <div class="event-image">
+              <div class="event-date-badge">
+                <div class="date-month">May</div>
+                <div class="date-day">2</div>
+              </div>
+              <div class="event-status"></div>
+            </div>
+
+            <div class="event-content">
+              <div class="event-category">International Dance Contest</div>
+              <h3 class="event-title-info">Europestage Türkiye 2026</h3>
+
+              <div class="event-details">
+                <div class="event-detail">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span> Belek, Türkiye</span>
+                </div>
+                <div class="event-detail">
+                  <i class="fas fa-clock"></i>
+                  <span
+                    >Saturday, May 2nd, 2026 (Length of stay: 30 April - 6 May
+                    2026) •</span
+                  >
+                </div>
+              </div>
+
+              <div class="spots-section">
+                <div class="spots-label">Available spots</div>
+                <div class="spots-number limited" data-spots="200">200</div>
+
+                <div class="countdown-section">
+                  <div class="countdown-label">Registration closes in</div>
+                  <div
+                    class="countdown-timer"
+                    data-target="2026-03-15T23:59:59"
+                  >
+                    <div class="countdown-item">
+                      <div class="countdown-number days">--</div>
+                      <div class="countdown-label-small">Days</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                      <div class="countdown-number hours">--</div>
+                      <div class="countdown-label-small">Hours</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                      <div class="countdown-number minutes">--</div>
+                      <div class="countdown-label-small">Min</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                      <div class="countdown-number seconds">--</div>
+                      <div class="countdown-label-small">Sec</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-actions">
+                <a
+                  href="https://example.com/register-turkey"
+                  class="btn btn-primary"
+                  >Participate</a
+                >
+                <a href="europestage/turkey.html" class="btn btn-secondary"
+                  >View Details</a
+                >
+              </div>
+
+              <div class="spots-info">
+                <div class="spots-available">Limited Spots</div>
+                <div class="registration-status">
+                  <div class="status-dot"></div>
+                  <span>Registraition Open</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- World of Dance Latvia Event -->
+          <div class="event-card wod-latvia">
+            <div class="event-image">
+              <div class="event-date-badge">
+                <div class="date-month">May</div>
+                <div class="date-day">23</div>
+              </div>
+              <div class="event-status"></div>
+            </div>
+
+            <div class="event-content">
+              <div class="event-category">International Dance Contest</div>
+              <h3 class="event-title-info">World of Dance Latvia</h3>
+
+              <div class="event-details">
+                <div class="event-detail">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Ķīpsalas iela 8, Riga, Latvia</span>
+                </div>
+                <div class="event-detail">
+                  <i class="fas fa-clock"></i>
+                  <span>Saturday, May 23rd, 2026 •</span>
+                </div>
+              </div>
+
+              <div class="spots-section">
+                <div class="spots-label">Available spots</div>
+                <div class="spots-number" data-spots="180">180</div>
+
+                <div class="countdown-section">
+                  <div class="countdown-label">Registration closes in</div>
+                  <div
+                    class="countdown-timer"
+                    data-target="2026-04-01T23:59:59"
+                  >
+                    <div class="countdown-item">
+                      <div class="countdown-number days">--</div>
+                      <div class="countdown-label-small">Days</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                      <div class="countdown-number hours">--</div>
+                      <div class="countdown-label-small">Hours</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                      <div class="countdown-number minutes">--</div>
+                      <div class="countdown-label-small">Min</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                      <div class="countdown-number seconds">--</div>
+                      <div class="countdown-label-small">Sec</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-actions">
+                <a href="/registration/wod-latvia" class="btn btn-primary"
+                  >Participate</a
+                >
+                <a
+                  href="worldofdancelatvia/worldofdancelatvia.html"
+                  class="btn btn-secondary"
+                  >View Details</a
+                >
+              </div>
+
+              <div class="spots-info">
+                <div class="spots-available">Limited Spots</div>
+                <div class="registration-status">
+                  <div class="status-dot"></div>
+                  <span>Registration Open</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about-section" class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Crew</h2>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="member-photo">
+              <img src="media/Markina.jpeg" alt="Anastasiia M." />
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Anastasiia M.</h3>
+              <p class="member-role">Founder (Chair)</p>
+              <p class="member-nickname">Ms. Always Right</p>
+            </div>
+          </div>
+
+          <div class="team-member">
+            <div class="member-photo">
+              <img src="media/Alex.jpeg" alt="Alex P." />
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Alex P.</h3>
+              <p class="member-role">Founder (CEO)</p>
+              <p class="member-nickname">Mr. Ideas</p>
+            </div>
+          </div>
+
+          <div class="team-member">
+            <div class="member-photo">
+              <img src="media/Simon.jpeg" alt="Simon F." />
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Simon F.</h3>
+              <p class="member-role">Director UK & IRL</p>
+              <p class="member-nickname">Mr. Perfection</p>
+            </div>
+          </div>
+
+          <div class="team-member">
+            <div class="member-photo">
+              <img src="media/Valerija.jpg" alt="Valerija D." />
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Valerija D.</h3>
+              <p class="member-role">Events Manager</p>
+              <p class="member-nickname">Ms. Organiser</p>
+            </div>
+          </div>
+
+          <div class="team-member">
+            <div class="member-photo">
+              <img src="media/Angie.jpg" alt="Anželika G." />
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Anželika G.</h3>
+              <p class="member-role">Events Manager</p>
+              <p class="member-nickname">Ms. Solutions</p>
+            </div>
+          </div>
+
+          <div class="team-member">
+            <div class="member-photo">
+              <img src="media/solvita.jpeg" alt="Solvita S." />
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Solvita S.</h3>
+              <p class="member-role">Studio Liaison</p>
+              <p class="member-nickname">Ms. Busy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Contacts Section -->
+    <footer id="contacts-section" class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <!-- Company Info & Contact -->
+          <div class="footer-company">
+            <div class="footer-logo">
+              <img src="media/S4D-8.png" alt="Space4Dance Logo" />
+            </div>
+            <p class="footer-description">
+              We are not just dance competitions - we are the platform for your
+              growth!
+            </p>
+            <div class="footer-contact">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:info@space4dance.com">info@space4dance.org</a>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+37125511416">+371 25511416</a>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+37127562403">+371 27562403</a>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Riga, Latvia</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="footer-nav">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#events-section">Events</a></li>
+              <li><a href="#projects-section">Projects</a></li>
+              <li><a href="#about-section">About</a></li>
+            </ul>
+          </div>
+
+          <!-- Events/Projects -->
+          <div class="footer-events">
+            <h4>Our Events</h4>
+            <div class="footer-event-logos">
+              <div class="event-logo-item">
+                <div class="event-logo">
+                  <img src="media/logo_es_white.svg" alt="Europestage" />
+                </div>
+                <span class="event-name">Follow EUROPESTAGE</span>
+                <div class="event-social-links">
+                  <a
+                    href="https://www.facebook.com/europestagelatvia"
+                    target="_blank"
+                    class="event-social-link"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/europestage?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank"
+                    class="event-social-link"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="event-logo-item">
+                <div class="event-logo">
+                  <img
+                    src="media/wod-logo-latvia-light.png"
+                    alt="World of Dance Latvia"
+                  />
+                </div>
+                <span class="event-name">Follow WOD Latvia</span>
+                <div class="event-social-links">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61555639377816"
+                    target="_blank"
+                    class="event-social-link"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/worldofdancelatvia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank"
+                    class="event-social-link"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
+                <div class="event-links">
+                  <a
+                    href="https://worldofdance.com"
+                    target="_blank"
+                    class="event-link"
+                    >www.worldofdance.com</a
+                  >
+                  <a
+                    href="https://www.youtube.com/channel/UC8xib1EjaAbsstncxXSUNZg"
+                    target="_blank"
+                    class="event-link"
+                    >Official WOD YouTube (6.08M)</a
+                  >
+                  <a
+                    href="https://www.instagram.com/worldofdance"
+                    target="_blank"
+                    class="event-link"
+                    >Official WOD Instagram (2.4M)</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            © 2025 Space4Dance. All rights reserved.
+          </p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("DOM loaded, initializing...");
+
+        // Carousel functionality
+        class Carousel {
+          constructor() {
+            this.slides = document.querySelectorAll(".carousel-slide");
+            this.currentSlide = 0;
+            this.totalSlides = this.slides.length;
+            this.autoPlayInterval = null;
+
+            if (this.slides.length > 0) {
+              this.init();
+            }
+          }
+
+          init() {
+            this.startAutoPlay();
+          }
+
+          goToSlide(slideIndex) {
+            if (this.slides[this.currentSlide]) {
+              this.slides[this.currentSlide].classList.remove("active");
+              const currentTitle =
+                this.slides[this.currentSlide].querySelector(".event-title");
+              if (currentTitle) {
+                currentTitle.classList.remove("active");
+              }
+            }
+
+            this.currentSlide = slideIndex;
+
+            if (this.slides[this.currentSlide]) {
+              this.slides[this.currentSlide].classList.add("active");
+
+              setTimeout(() => {
+                const newTitle =
+                  this.slides[this.currentSlide].querySelector(".event-title");
+                if (newTitle) {
+                  newTitle.classList.add("active");
+                }
+              }, 300);
+            }
+          }
+
+          nextSlide() {
+            const nextIndex = (this.currentSlide + 1) % this.totalSlides;
+            this.goToSlide(nextIndex);
+          }
+
+          startAutoPlay() {
+            this.autoPlayInterval = setInterval(() => {
+              this.nextSlide();
+            }, 4000);
+          }
+
+          stopAutoPlay() {
+            if (this.autoPlayInterval) {
+              clearInterval(this.autoPlayInterval);
+            }
+          }
+        }
+
+        // StatsCounter class
+        class StatsCounter {
+          constructor() {
+            this.counters = document.querySelectorAll(".stat-item");
+            this.hasAnimated = false;
+            if (this.counters.length > 0) {
+              this.init();
+            }
+          }
+
+          init() {
+            this.createObserver();
+          }
+
+          createObserver() {
+            const options = {
+              threshold: 0.3,
+              rootMargin: "0px 0px -50px 0px",
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting && !this.hasAnimated) {
+                  this.animateCounters();
+                  this.hasAnimated = true;
+                }
+              });
+            }, options);
+
+            const statsGrid = document.querySelector(".stats-grid");
+            if (statsGrid) {
+              observer.observe(statsGrid);
+            }
+          }
+
+          animateCounters() {
+            this.counters.forEach((counter, index) => {
+              setTimeout(() => {
+                counter.classList.add("animate");
+                this.countUp(counter);
+              }, index * 200);
+            });
+          }
+
+          countUp(counter) {
+            const target = parseInt(counter.dataset.target);
+            const numberElement = counter.querySelector(".stat-number");
+            if (!numberElement) return;
+
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+
+            const timer = setInterval(() => {
+              current += increment;
+
+              if (current >= target) {
+                current = target;
+                clearInterval(timer);
+              }
+
+              let displayValue = Math.floor(current);
+              if (target >= 1000) {
+                displayValue = this.formatNumber(Math.floor(current)) + "+";
+              }
+
+              numberElement.textContent = displayValue;
+
+              if (current < target) {
+                numberElement.classList.add("counting");
+                setTimeout(() => {
+                  numberElement.classList.remove("counting");
+                }, 100);
+              }
+            }, 16);
+          }
+
+          formatNumber(num) {
+            if (num >= 1000) {
+              return (num / 1000).toFixed(0) + "K";
+            }
+            return num.toString();
+          }
+        }
+
+        // Countdown timer functionality
+        function updateCountdowns() {
+          const timers = document.querySelectorAll(".countdown-timer");
+
+          timers.forEach((timer) => {
+            const targetDate = new Date(timer.dataset.target);
+            const now = new Date();
+            const diff = targetDate - now;
+
+            if (diff > 0) {
+              const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+              const hours = Math.floor(
+                (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+              );
+              const minutes = Math.floor(
+                (diff % (1000 * 60 * 60)) / (1000 * 60)
+              );
+              const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+              timer.querySelector(".days").textContent = String(days).padStart(
+                2,
+                "0"
+              );
+              timer.querySelector(".hours").textContent = String(
+                hours
+              ).padStart(2, "0");
+              timer.querySelector(".minutes").textContent = String(
+                minutes
+              ).padStart(2, "0");
+              timer.querySelector(".seconds").textContent = String(
+                seconds
+              ).padStart(2, "0");
+            } else {
+              timer.querySelector(".days").textContent = "00";
+              timer.querySelector(".hours").textContent = "00";
+              timer.querySelector(".minutes").textContent = "00";
+              timer.querySelector(".seconds").textContent = "00";
+            }
+          });
+        }
+
+        // Инициализация всех классов
+        console.log("Initializing classes...");
+        new Carousel();
+        new StatsCounter();
+        updateCountdowns();
+        setInterval(updateCountdowns, 1000);
+
+        // Mobile menu functionality
+        const hamburger = document.querySelector(".hamburger");
+        const mobileMenu = document.querySelector(".mobile-menu");
+        const mobileClose = document.querySelector(".mobile-close");
+        const body = document.body;
+
+        console.log("Mobile menu elements:", {
+          hamburger,
+          mobileMenu,
+          mobileClose,
+        });
+
+        if (hamburger && mobileMenu && mobileClose) {
+          // Открыть меню
+          hamburger.addEventListener("click", () => {
+            console.log("Hamburger clicked");
+            hamburger.classList.add("active");
+            mobileMenu.classList.add("active");
+            body.style.overflow = "hidden";
+          });
+
+          // Закрыть меню (крестик)
+          mobileClose.addEventListener("click", () => {
+            console.log("Close clicked");
+            hamburger.classList.remove("active");
+            mobileMenu.classList.remove("active");
+            body.style.overflow = "";
+          });
+
+          // Close mobile menu when clicking on links
+          document
+            .querySelectorAll(
+              ".mobile-nav-links a:not(.mobile-dropdown-toggle)"
+            )
+            .forEach((link) => {
+              link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                mobileMenu.classList.remove("active");
+                body.style.overflow = "";
+              });
+            });
+
+          // Mobile dropdown functionality
+          const mobileDropdownToggle = document.querySelector(
+            ".mobile-dropdown-toggle"
+          );
+          const mobileDropdownMenu = document.querySelector(
+            ".mobile-dropdown-menu"
+          );
+
+          if (mobileDropdownToggle && mobileDropdownMenu) {
+            const mobileDropdownArrow =
+              mobileDropdownToggle.querySelector(".dropdown-arrow");
+
+            mobileDropdownToggle.addEventListener("click", () => {
+              mobileDropdownMenu.classList.toggle("active");
+              if (mobileDropdownArrow) {
+                mobileDropdownArrow.style.transform =
+                  mobileDropdownMenu.classList.contains("active")
+                    ? "rotate(180deg)"
+                    : "rotate(0deg)";
+              }
+            });
+
+            // Close mobile menu when clicking on dropdown links
+            document
+              .querySelectorAll(".mobile-dropdown-menu a")
+              .forEach((link) => {
+                link.addEventListener("click", () => {
+                  hamburger.classList.remove("active");
+                  mobileMenu.classList.remove("active");
+                  body.style.overflow = "";
+                });
+              });
+          }
+        }
+
+        // Video functionality
+        console.log("Setting up video functionality...");
+        const isMobile = window.matchMedia("(max-width: 768px)").matches;
+        const isTouchDevice = "ontouchstart" in window;
+
+        console.log("Device info:", { isMobile, isTouchDevice });
+
+        document.querySelectorAll(".project-card").forEach((card, index) => {
+          const video = card.querySelector(".project-video");
+
+          if (!video) return;
+
+          console.log(`Setting up video ${index + 1}`);
+
+          video.setAttribute("webkit-playsinline", "");
+          video.setAttribute("x-webkit-airplay", "allow");
+
+          video.addEventListener("canplay", () => {
+            console.log(`Video ${index + 1}: Can play`);
+
+            if (isMobile || isTouchDevice) {
+              video
+                .play()
+                .then(() => {
+                  console.log(
+                    `Video ${index + 1}: Playing successfully on mobile`
+                  );
+                })
+                .catch((error) => {
+                  console.log(
+                    `Video ${index + 1}: Mobile autoplay blocked`,
+                    error
+                  );
+                });
+            }
+          });
+
+          video.addEventListener("error", (e) => {
+            console.error(`Video ${index + 1}: Error loading`, e);
+          });
+
+          if (isMobile || isTouchDevice) {
+            video.load();
+
+            card.addEventListener(
+              "touchstart",
+              () => {
+                if (video.paused) {
+                  video
+                    .play()
+                    .catch((e) => console.log(`Touch play failed:`, e));
+                }
+              },
+              { passive: true }
+            );
+
+            card.addEventListener("click", () => {
+              if (video.paused) {
+                video.play().catch((e) => console.log(`Click play failed:`, e));
+              }
+            });
+          } else {
+            card.addEventListener("mouseenter", () => {
+              if (video.readyState >= 2) {
+                video.play().catch((e) => console.log(`Hover play failed:`, e));
+              }
+            });
+
+            card.addEventListener("mouseleave", () => {
+              video.pause();
+              video.currentTime = 0;
+            });
+          }
+        });
+
+        const globalEnableAutoplay = () => {
+          console.log("Global autoplay activation");
+          document
+            .querySelectorAll(".project-video")
+            .forEach((video, index) => {
+              if (video.paused) {
+                video
+                  .play()
+                  .then(() => {
+                    console.log(`Global: Video ${index + 1} started`);
+                  })
+                  .catch((e) => {
+                    console.log(`Global: Video ${index + 1} failed:`, e);
+                  });
+              }
+            });
+        };
+
+        document.addEventListener("touchstart", globalEnableAutoplay, {
+          once: true,
+          passive: true,
+        });
+        document.addEventListener("click", globalEnableAutoplay, {
+          once: true,
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+          link.addEventListener("click", (e) => {
+            document
+              .querySelectorAll(".nav-links a")
+              .forEach((l) => l.classList.remove("active"));
+            e.target.classList.add("active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
