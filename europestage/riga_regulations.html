@@ -23,318 +23,869 @@
       src="https://kit.fontawesome.com/7c7471db46.js"
       crossorigin="anonymous"
     ></script>
-    <!--Swiper's link-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <title>EuropeStage</title>
+    <title>Europestage Riga 2026 - Regulations</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(180deg, #000000 0%, #750000 100%);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: 80px;
+        color: white;
+        padding: 40px 0;
+      }
+
+      .header h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header .date {
+        font-size: 1.5rem;
+        opacity: 0.9;
+        font-weight: 300;
+      }
+
+      .content {
+        background: rgba(255, 255, 255, 0.96);
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .section {
+        padding: 40px;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .section:last-child {
+        border-bottom: none;
+      }
+
+      .section-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .section-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #ff0000, #ff5e00);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        color: white;
+        font-size: 1.5rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #2c3e50;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+
+      .card {
+        background: #f8f9fa;
+        border-radius: 12px;
+        padding: 25px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        border-color: #ff7b00;
+      }
+
+      .card-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+
+      .card-content {
+        color: #666;
+        font-size: 0.95rem;
+      }
+
+      .highlight-box {
+        background: linear-gradient(135deg, #ff7b00, #ff9500);
+        color: white;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        margin: 30px 0;
+      }
+
+      .highlight-box h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+
+      .highlight-box .prize {
+        font-size: 3rem;
+        font-weight: 800;
+        margin: 20px 0;
+      }
+
+      .criteria-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .criteria-item {
+        background: linear-gradient(135deg, #ea66a8, #764ba2);
+        color: white;
+        padding: 25px;
+        border-radius: 12px;
+        text-align: center;
+      }
+
+      .criteria-points {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .info-card {
+        background: #f8f9fa;
+        border-radius: 12px;
+        padding: 30px;
+        border-left: 5px solid #ff7b00;
+      }
+
+      .info-card h4 {
+        color: #2c3e50;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+      }
+
+      .info-card p,
+      .info-card ul {
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .info-card ul {
+        margin: 10px 0;
+        padding-left: 20px;
+      }
+
+      .price-card {
+        background: linear-gradient(135deg, #502c2c, #db3434);
+        color: white;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+      }
+
+      .price-amount {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 20px 0;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #666;
+        font-size: 1.1rem;
+      }
+
+      .contact-icon {
+        width: 40px;
+        height: 40px;
+        background: #ff3838;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+
+      .apply-button {
+        background: linear-gradient(135deg, #ff0000, #ff9500);
+        color: white;
+        padding: 20px 40px;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        margin: 20px auto;
+        text-align: center;
+      }
+
+      .apply-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(255, 123, 0, 0.3);
+      }
+
+      .warning-box {
+        background: #fff3cd;
+        border: 1px solid #ffeaa7;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px 0;
+        color: #856404;
+      }
+
+      .warning-box strong {
+        color: #b45309;
+      }
+
+      .age-groups {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+      }
+
+      .age-badge {
+        background: linear-gradient(135deg, #f30000, #ff9500);
+        color: white;
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+
+      .category-badge {
+        background: linear-gradient(135deg, #ff7b00, #ff0000);
+        color: white;
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-weight: 600;
+        margin: 5px;
+        display: inline-block;
+      }
+
+      .text-content {
+        background: #f8f9fa;
+        border-radius: 12px;
+        padding: 25px;
+        margin: 20px 0;
+        border-left: 5px solid #ff7b00;
+      }
+
+      .text-content h5 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+      }
+
+      .text-content p {
+        margin-bottom: 15px;
+        line-height: 1.6;
+        color: #555;
+      }
+
+      .steps-list {
+        background: #f8f9fa;
+        border-radius: 12px;
+        padding: 25px;
+        margin: 20px 0;
+      }
+
+      .steps-list ol {
+        padding-left: 20px;
+      }
+
+      .steps-list li {
+        margin-bottom: 15px;
+        line-height: 1.6;
+        color: #555;
+      }
+
+      .legal-text {
+        background: #f1f3f4;
+        border-radius: 10px;
+        padding: 25px;
+        margin: 20px 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #444;
+      }
+
+      .company-note {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        color: #1976d2;
+      }
+
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2rem;
+        }
+
+        .section {
+          padding: 25px;
+        }
+
+        .section-title {
+          font-size: 1.5rem;
+        }
+
+        .container {
+          padding: 15px;
+        }
+
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .section-header {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .section-icon {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!--ES RIGA REGULATIONS-->
-    <section
-      class="section-padding privacy"
-      style="background-color: white; color: black; padding-top: 100px"
-    >
-      <div class="container">
-        <div class="header">
-          <h1>EUROPESTAGE RIGA 2026</h1>
-          <h6>1 MARCH 2026, RIGA, LATVIA, ATTA CENTRE</h6>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar-container">
+        <!-- Logo -->
+        <div class="navbar-logo">
+          <img
+            src="assets/images/logo_es_white.svg"
+            alt=""
+            width="80"
+            height="40"
+            fill="none"
+          />
         </div>
-        <div class="paragraph">
-          <p>
-            For the purposes of these Terms and Conditions, all references to
-            Europestage also mean TK Events SIA, the company owning the
-            Europestage brand.
-          </p>
-          <h1>AGE GROUPS:</h1>
-          <ul>
-            <li>3-4</li>
-            <li>5-6</li>
-            <li>7-9</li>
-            <li>10-12</li>
-            <li>13-15</li>
-            <li>16-18</li>
-            <li>ADULTS</li>
-            <li>MIX (determined by average age)</li>
-          </ul>
-        </div>
-        <div class="paragraph">
-          <h1>FORMAT:</h1>
-          <ul>
-            <li>Group</li>
-          </ul>
-        </div>
-        <div class="paragraph">
-          <h1>CATEGORY:</h1>
-          <ul>
-            <li>KIDS DANCE</li>
-            <li>FOLK DANCE</li>
-            <li>FOLK-STYLE DANCE</li>
-            <li>STAGE DANCE</li>
-            <li>CONTEMP & JAZZ-MODERN</li>
-            <li>HIP HOP & URBAN</li>
-          </ul>
-        </div>
-        <div class="paragraph">
-          <h1>JUDGING & AWARDS/ OLYMPIC SCORING SYSTEM</h1>
-          <p>
-            Each Judge evaluates and scores each performance with a maximum of
-            100 points based on the following criteria:
-          </p>
-          <ol>
-            <li>Technique: <strong>30 points max</strong></li>
-            <li>Choreography: <strong>30 points max</strong></li>
-            <li>Presentation: <strong>20 points max</strong></li>
-            <li>Musicality: <strong>20 points max</strong></li>
-          </ol>
-          <p>
-            Using the Olympic scoring system were one highest and one lowest
-            scores are eliminated, the points awarded for each dance will be the
-            aggregate of the remaining three scores.
-          </p>
-          <p>
-            Winning Performances (1, 2 and 3 places) awarded with Diplomas and
-            Trophies
-          </p>
-          <p>
-            Runners-up (4, 5 and 6 places) awarded with Diplomas and Large
-            Medals
-          </p>
-          <p>
-            Performances are scored within their own declared nomination: Age
-            Group and Category
-          </p>
-          <p>
-            <strong>DAY 1 (Europestage Kids Day) / 3–9 years old</strong> –
-            places can be duplicated in each Age Group and Category.
-          </p>
-          <p>
-            <strong>DAY 2 / 10+ years old </strong>– first three places only
-            (i.e. 1st, 2nd and 3rd) DO NOT GET DUPLICATED within the same Age
-            Group and Category, except for:
-          </p>
-          <ul>
-            <li>
-              In case of a tie (that is when the same number of points are
-              awarded)
-            </li>
-            <li>
-              In case of 1 point separating places (working from top going down)
-            </li>
-          </ul>
-        </div>
-        <div class="paragraph">
-          <h1>CASH or CASH EQUIVALENT PRIZES</h1>
-          <p>
-            The top scoring performance (with the highest number of points out
-            of all categories) IN EACH AGE GROUP will receive a €200 (two
-            hundred euros) cash prize. In case of a tie, it will be up to the
-            Judges to determine the winner.
-          </p>
-          <p>
-            DAY 1 (Europestage Kids Day) / 3–9 years old – the top scoring
-            performance choreographer of the day will receive an all-inclusive
-            pre-booked (by Europestage) trip to the “Camp Fabrika” week in
-            Istanbul (flight, accommodation and workshops), up to a maximum
-            value of €1,000
-          </p>
-          <p>
-            DAY 2 / 10+ years old – the top scoring performance choreographer of
-            the day will receive an all-inclusive pre-booked (by Europestage)
-            trip to the “Camp Fabrika” week in Istanbul (flight, accommodation
-            and workshops), up to a maximum value of €1,000.
-          </p>
-        </div>
-        <div class="paragraph">
-          <h1>DEADLINE</h1>
-          <p>Event dates: 1 of March 2026</p>
-          <p>
-            <strong>Closing Date: Monday, 5 January 2026. </strong>
-            We expect demand for places to be very high again this year. You are
-            advised to book early as we reserve the right to close to new
-            applications once our maximum number of performances on both days is
-            reached. Please follow the official updates (as to how many spaces
-            are left) and news feeds on our website and Instagram @europestage
-          </p>
-          <p>
-            After the closing date or earlier once new applications are closed
-            you can still sign up for our waiting list; should a suitable space
-            become available we will make an offer for you to consider at the
-            time.
-          </p>
-        </div>
-        <div class="paragraph">
-          <h1>APPLICATION</h1>
-          <p>To apply, please:</p>
-          <ol>
-            <li>visit our website https://welovedanc.ing</li>
-            <li>select your event</li>
-            <li>
-              sign into your account (or create one if you do not have
-              Europestage online account)
-            </li>
-            <li>book dance spaces</li>
-            <li>
-              make a booking payment to guarantee stage time (a small deposit
-              payment)
-            </li>
-            <li>
-              when you are ready, you can complete the other forms on your
-              Dashboard (this info must be completed by Friday, 31 January
-              2025):
-              <ul>
-                <li>performance details</li>
-                <li>
-                  competitors’ names and DOB. In the event of any queries
-                  Europestage reserve the right to inspect documentation.
-                </li>
-                <li>upload your sound tracks and visual backgrounds</li>
-              </ul>
-            </li>
-          </ol>
-        </div>
-        <div class="paragraph">
-          <h1>COPYRIGHT</h1>
-          <p>
-            By submitting your application, you and all the individual dancers
-            listed in the Competitors dashboard section and allocated in the
-            Performance dashboard section, give your expressed permission to
-            allow Europestage and/or its accredited partners to photograph and
-            take video shots on stage and other locations during the competition
-            days. You also agree that this material may be used for website and
-            other promotional purposes by Europestage and/or its accredited
-            partners and that the copyrights related to this material belongs to
-            TK Events SIA.
-          </p>
-          <p>
-            By submitting your application, you also confirm that your dance
-            performance(s) do not infringe the copyright or intellectual
-            property rights of any other person, dance studio or organisation
-            here or worldwide. To protect the integrity of the competition and
-            promote the creativity of others in the dance world we take any
-            infringements of this condition very seriously indeed. If you are
-            discovered to be in breach of this rule your act will be expelled
-            from the competition without refund. We also reserve the right to
-            take further action, after the competition has finished.
-          </p>
-        </div>
-        <div class="paragraph">
-          <h1>TECHNICAL SPECS</h1>
-          <p>Stage: 12 x 10 meters</p>
-          <p>Professional Sound & Lights equipment</p>
-          <p>Stage flooring: professional vinyl</p>
-          <p>
-            Each competitor can use our stage LED screen for video & photo
-            visualisation during their performance. The media files must be
-            uploaded during the application process in your online account by no
-            later than Friday, 31 January 2025
-          </p>
-          <p>Video format: 720.p, .MP4</p>
-          <p>Photo format: .jpg and .png</p>
-        </div>
-        <div class="paragraph">
-          <h1>PRICE</h1>
-          <p>Registration fee (per competitor):</p>
-          <ul>
-            <li>EUR 23 + Latvian VAT Tax (21%)</li>
-            <li>
-              EUR 16 + Latvian VAT Tax (21%) per dance for 2 or more dances by
-              the same competitor
-            </li>
-          </ul>
-          <p>Each Competitor will receive:</p>
-          <ul>
-            <li>Personal named “Competitor” Diploma</li>
-            <li>“Competitor” Medal</li>
-            <li>Europestage branded gift</li>
-          </ul>
-          <div
-            class="container btn-area d-flex text-center align-items-center justify-content-center"
-          >
-            <div class="row btn-area">
-              <div class="col-lg-12">
-                <div class="regul-btn">
-                  <a href="https://europestage.dance/studios2025/signin.asp"
-                    >BOOK NOW</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="paragraph">
-          <h1>EVENT ENTRY FEE</h1>
-          <p>
-            It is our top priority to manage event entry and people flows
-            effectively, safely, swiftly and easily. For these reasons we will
-            sell tickets to the event at a small nominal price to count and
-            monitor the number of visitors.
-          </p>
-          <p>
-            Please visit our website:
-            <a
-              href="https://welovedanc.ing"
-              target="_blank"
-              rel="noopener noreferrer"
-              >https://welovedanc.ing</a
-            >
-            to purchase your tickets for this event (or click button bellow "Buy
-            Tickets").
-          </p>
-          <p>Admission fee per person: EUR 5 + Latvian VAT Tax (21%)</p>
-          <p>
-            Previously confirmed & accredited team managers; and Competitors
-            listed & allocated in Europestage online accounts are exempt from
-            the admission fee.
-          </p>
 
-          <div
-            class="container btn-area d-flex text-center align-items-center justify-content-center"
+        <!-- Desktop Menu -->
+        <ul class="navbar-menu">
+          <li><a href="https://space4dance.netlify.app">Home</a></li>
+          <li><a href="riga.html">Riga 2026</a></li>
+          <li><a href="turkey.html">Turkey 2026</a></li>
+          <li><a href="#shop">Shop</a></li>
+        </ul>
+
+        <!-- Icons -->
+        <div class="navbar-icons">
+          <a href="#" class="navbar-icon btn sign-in-btn" title="Sign In">
+            <i class="fas fa-user"></i>
+            <span>Log In</span>
+          </a>
+          <a
+            href="#"
+            class="navbar-icon btn buy-tickets-btn"
+            title="Buy Tickets"
           >
-            <div class="row btn-area">
-              <div class="col-lg-12">
-                <div class="regul-btn">
-                  <a href="https://europestage.dance/tickets/book_tickets.asp"
-                    >BUY TICKETS</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
+            <i class="fas fa-shopping-bag"></i>
+            <span>Buy Tickets</span>
+          </a>
         </div>
-        <div class="paragraph">
-          <h1>CONTACTS</h1>
-          <p>
-            <a href="mailto:info@dance-champs.org">info@dance-champs.org</a>
-            <br />
-            Instagram:
-            <a
-              href="https://www.instagram.com/europestage"
-              target="_blank"
-              rel="noopener noreferrer"
-              >@europestage</a
-            >
-            <br />
-            Facebook:
-            <a
-              href="https://www.facebook.com/europestagelatvia/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >europestagelatvia</a
-            >
-            <br />
-            Website:
-            <a
-              href="https://welovedanc.ing"
-              target="_blank"
-              rel="noopener noreferrer"
-              >https://welovedanc.ing</a
-            >
-          </p>
+
+        <!-- Mobile Hamburger -->
+        <button class="navbar-toggle" id="navbar-toggle">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-content">
+        <ul class="mobile-menu-links">
+          <li><a href="https://space4dance.netlify.app">Home</a></li>
+          <li><a href="riga.html">Riga 2026</a></li>
+          <li><a href="turkey.html">Turkey 2026</a></li>
+          <li><a href="#shop">Shop</a></li>
+        </ul>
+
+        <div class="mobile-menu-icons">
+          <a href="#" class="mobile-menu-icon btn sign-in-btn" title="Sign In">
+            <i class="fas fa-user"></i>
+            <span>Log In</span>
+          </a>
+          <a
+            href="#"
+            class="mobile-menu-icon btn buy-tickets-btn"
+            title="Buy Tickets"
+          >
+            <i class="fas fa-shopping-bag"></i>
+            <span>Buy Tickets</span>
+          </a>
         </div>
       </div>
-    </section>
+    </div>
+    <!--ES RIGA REGULATIONS-->
+    <div class="container">
+      <div class="header">
+        <h1>EUROPESTAGE RIGA 2026</h1>
+        <div class="date">March 1, 2026 • Riga, Latvia</div>
+      </div>
+
+      <div class="content">
+        <!-- Company Information -->
+        <div class="section">
+          <div class="company-note">
+            <strong>Note:</strong> For the purposes of these Terms and
+            Conditions, all references to Europestage also mean TK Events SIA,
+            the company owning the Europestage brand.
+          </div>
+        </div>
+
+        <!-- Age Groups Section -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon">👥</div>
+            <h2 class="section-title">Age Groups</h2>
+          </div>
+          <div class="age-groups">
+            <div class="age-badge">3-4</div>
+            <div class="age-badge">5-6</div>
+            <div class="age-badge">7-9</div>
+            <div class="age-badge">10-12</div>
+            <div class="age-badge">13-15</div>
+            <div class="age-badge">16-18</div>
+            <div class="age-badge">ADULTS</div>
+            <div class="age-badge">MIX</div>
+          </div>
+          <p style="text-align: center; margin-top: 20px; color: #666">
+            MIX groups are determined by average age
+          </p>
+        </div>
+
+        <!-- Format Section -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon">👫</div>
+            <h2 class="section-title">Format Requirements</h2>
+          </div>
+          <div class="info-card">
+            <h4>GROUP Format Only</h4>
+            <p><strong>Minimum 5+ dancers</strong> per performance required</p>
+          </div>
+        </div>
+
+        <!-- Categories Section -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon">💃</div>
+            <h2 class="section-title">Dance Categories</h2>
+          </div>
+          <div style="text-align: center">
+            <span class="category-badge">KIDS DANCE</span>
+            <span class="category-badge">FOLK DANCE</span>
+            <span class="category-badge">FOLK-STYLE DANCE</span>
+            <span class="category-badge">STAGE DANCE</span>
+            <span class="category-badge">CONTEMP & JAZZ-MODERN</span>
+            <span class="category-badge">HIP HOP & URBAN</span>
+          </div>
+        </div>
+
+        <!-- Judging & Awards Section -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon">⭐</div>
+            <h2 class="section-title">
+              Judging & Awards - Olympic Scoring System
+            </h2>
+          </div>
+
+          <div class="text-content">
+            <p>
+              Each Judge evaluates and scores each performance with a maximum of
+              <strong>100 points</strong> based on the following criteria:
+            </p>
+          </div>
+
+          <div class="criteria-grid">
+            <div class="criteria-item">
+              <div class="criteria-points">30</div>
+              <div>Technique</div>
+              <div style="font-size: 0.9rem; margin-top: 5px">points max</div>
+            </div>
+            <div class="criteria-item">
+              <div class="criteria-points">30</div>
+              <div>Choreography</div>
+              <div style="font-size: 0.9rem; margin-top: 5px">points max</div>
+            </div>
+            <div class="criteria-item">
+              <div class="criteria-points">20</div>
+              <div>Presentation</div>
+              <div style="font-size: 0.9rem; margin-top: 5px">points max</div>
+            </div>
+            <div class="criteria-item">
+              <div class="criteria-points">20</div>
+              <div>Musicality</div>
+              <div style="font-size: 0.9rem; margin-top: 5px">points max</div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h4>Olympic Scoring System</h4>
+            <p>
+              Using the Olympic scoring system where one highest and one lowest
+              score are eliminated, the points awarded for each dance will be
+              the aggregate of the remaining three scores.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h4>Awards Structure</h4>
+            <p>
+              <strong>Winning Performances (1, 2 and 3 places)</strong> awarded
+              with Diplomas and Trophies
+            </p>
+            <p>
+              Performances are scored within their own declared nomination: Age
+              Group and Category
+            </p>
+
+            <h5 style="margin-top: 20px">Placement Rules:</h5>
+            <p>
+              <strong>Age Groups 3-4; 5-6; 7-9 and 10-12:</strong> Places can be
+              duplicated in each Age Group and Category.
+            </p>
+
+            <p>
+              <strong>Age Groups 13-15; 16-18 and Adults:</strong> First three
+              places only (i.e. 1st, 2nd and 3rd) DO NOT GET DUPLICATED within
+              the same Age Group and Category, except for:
+            </p>
+            <ul>
+              <li>
+                In case of a tie (that is when the same number of points are
+                awarded)
+              </li>
+              <li>
+                In case of 1 point separating places (working from top going
+                down)
+              </li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4>What Each Competitor Receives</h4>
+            <ul>
+              <li><strong>Personal named "Competitor" Diploma</strong></li>
+              <li><strong>"Competitor" Medal</strong></li>
+              <li><strong>Europestage branded gift</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Cash Prizes Section -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon">🏆</div>
+            <h2 class="section-title">Cash or Cash Equivalent Prizes</h2>
+          </div>
+          <div class="highlight-box">
+            <h3>GRAND PRIX SPECIAL PRIZE</h3>
+            <div class="prize">€2,000</div>
+            <p>
+              The top scoring team of the day, irrelevant of the age group or
+              nomination, will receive the €2000 Grand Prix Special Prize!
+            </p>
+          </div>
+        </div>
+
+        <!-- Important Deadlines Section -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon">📅</div>
+            <h2 class="section-title">Deadline</h2>
+          </div>
+
+          <div class="warning-box">
+            <p><strong>Event date:</strong> 1 March 2026</p>
+            <p><strong>Closing Date:</strong> 6 January 2026</p>
+          </div>
+
+          <div class="text-content">
+            <p>
+              We expect demand for places to be very high again this year. You
+              are advised to book early as we reserve the right to close to new
+              applications once our maximum number of performances is reached.
+              Please follow the official updates (as to how many spaces are
+              left) and news feeds on our website and Instagram @europestage
+            </p>
+
+            <p>
+              After the closing date or earlier once new applications are closed
+              you can still sign up for our waiting list; should a suitable
+              space become available we will make an offer for you to consider
+              at the time.
+            </p>
+          </div>
+        </div>
+
+        <!-- Application Process Section -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon">📝</div>
+            <h2 class="section-title">Application Process</h2>
+          </div>
+
+          <div class="text-content">
+            <h5>To apply, please:</h5>
+          </div>
+
+          <div class="steps-list">
+            <ol>
+              <li>visit our website <strong>www.space4dance.org</strong></li>
+              <li>select your event</li>
+              <li>
+                sign into your account (or create one if you do not have
+                Europestage online account)
+              </li>
+              <li>
+                Complete the other forms on your Dashboard:
+                <ul style="margin-top: 10px">
+                  <li>performance details</li>
+                  <li>
+                    competitors' names and DOB. In the event of any queries
+                    Europestage reserve the right to inspect documentation.
+                  </li>
+                  <li>upload your soundtracks</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+
+          <div style="text-align: center; margin-top: 30px">
+            <a href="https://www.space4dance.org" class="apply-button"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon">©</div>
+            <h2 class="section-title">Copyright & Legal Terms</h2>
+          </div>
+
+          <div class="legal-text">
+            <h5>Photography and Video Rights</h5>
+            <p>
+              By submitting your application, you and all the individual dancers
+              listed in the Competitors dashboard section and allocated in the
+              Performance dashboard section, give your expressed permission to
+              allow Europestage and/or its accredited partners to photograph and
+              take video shots on stage and other locations during the
+              competition days. You also agree that this material may be used
+              for website and other promotional purposes by Europestage and/or
+              its accredited partners and that the copyrights related to this
+              material belongs to TK Events SIA.
+            </p>
+
+            <h5 style="margin-top: 20px">Performance Copyright Compliance</h5>
+            <p>
+              By submitting your application, you also confirm that your dance
+              performance(s) do not infringe the copyright or intellectual
+              property rights of any other person, dance studio or organisation
+              here or worldwide. To protect the integrity of the competition and
+              promote the creativity of others in the dance world we take any
+              infringements of this condition very seriously indeed. If you are
+              discovered to be in breach of this rule your act will be expelled
+              from the competition without refund. We also reserve the right to
+              take further action, after the competition has finished.
+            </p>
+          </div>
+        </div>
+
+        <!-- Technical Specifications Section -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon">🎭</div>
+            <h2 class="section-title">Technical Specifications</h2>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <div class="card-title">Stage Size</div>
+              <div class="card-content">12 x 10 meters</div>
+            </div>
+            <div class="card">
+              <div class="card-title">Sound & Lights</div>
+              <div class="card-content">Professional Equipment</div>
+            </div>
+            <div class="card">
+              <div class="card-title">Stage Flooring</div>
+              <div class="card-content">Professional vinyl</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pricing Section -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon">💰</div>
+            <h2 class="section-title">Price</h2>
+          </div>
+
+          <div class="text-content">
+            <h5>Registration fee (per competitor):</h5>
+          </div>
+
+          <div class="info-grid">
+            <div class="price-card">
+              <h4>First Dance</h4>
+              <div class="price-amount">€25</div>
+              <p>+ Latvian VAT Tax (21%)</p>
+            </div>
+            <div class="price-card">
+              <h4>Second Dance</h4>
+              <div class="price-amount">€16</div>
+              <p>
+                + Latvian VAT Tax (21%)<br /><small
+                  >for the 2nd dance for the same competitor</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Venue Section -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon">🏢</div>
+            <h2 class="section-title">The Venue</h2>
+          </div>
+
+          <div class="info-card">
+            <h4>International Exhibition Centre "Ķīpsala"</h4>
+            <p>
+              Professional venue equipped with all necessary facilities for
+              international dance competitions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Event Entry Fee Section -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon">🎫</div>
+            <h2 class="section-title">Event Entry Fee</h2>
+          </div>
+
+          <div class="text-content">
+            <p>
+              It is our top priority to manage event entry and people flows
+              effectively, safely, swiftly and easily. For these reasons we will
+              sell tickets to the event at a small nominal price to count and
+              monitor the number of visitors.
+            </p>
+
+            <p>
+              Please visit our website: <strong>www.space4dance.org</strong> to
+              purchase your tickets for this event.
+            </p>
+          </div>
+
+          <div class="price-card">
+            <h4>Admission Fee per Person</h4>
+            <div class="price-amount">€6</div>
+            <p>+ Latvian VAT Tax (21%)</p>
+            <p style="margin-top: 15px; font-size: 0.9rem">
+              Previously confirmed & accredited team managers; and Competitors
+              listed & allocated in Europestage online accounts are exempt from
+              the admission fee.
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon">📞</div>
+            <h2 class="section-title">Contacts</h2>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <span>+371 25511416</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <span>+371 27562403</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🌐</div>
+              <span>www.space4dance.org</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <span>info@space4dance.org</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!--Footer section-->
     <footer class="footer">
       <div class="footer-content">
@@ -371,11 +922,7 @@
         </div>
 
         <!-- Login Button -->
-        <a
-          href="#"
-          class="login-btn"
-          >Log In</a
-        >
+        <a href="#" class="login-btn">Log In</a>
 
         <!-- Footer Bottom -->
         <div class="footer-bottom">

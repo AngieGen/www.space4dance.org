@@ -822,6 +822,17 @@ section {
   align-items: center;
   width: 100%;
 }
+.spots-note {
+  font-weight: 700;
+  color: var(--primary-red);
+  text-align: center;
+}
+.spots-text-note {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  padding: 0 15px;
+  text-align: center;
+}
 
 .spots-number {
   font-size: 4.5rem;
@@ -832,7 +843,7 @@ section {
 .spots-text {
   font-size: 0.9rem;
   color: var(--text-gray);
-  padding: 0 100px;
+  padding: 0 90px;
 }
 
 .spots-icon {
@@ -932,6 +943,9 @@ section {
 
   .btn-action {
     padding: 15px 20px;
+  }
+  .spots-text {
+    font-size: 10px;
   }
 }
 
