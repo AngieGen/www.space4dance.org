@@ -86,6 +86,44 @@ body {
   color: #ffffff;
 }
 
+/* Login Button */
+.login-btn {
+  background: #ff7b0000;
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 2px solid #ff7b00;
+}
+
+.login-btn a {
+  text-decoration: none;
+  color: #e66a00;
+  padding: 10px 10px;
+  transition: ease-in-out;
+}
+
+.login-btn a:hover {
+  color: black;
+  background: #e66a00;
+  border-color: #e66a00;
+  transform: translateY(-1px);
+  transition: ease-in-out;
+}
+.login-btn:hover {
+  background: #e66a00;
+  border-color: #e66a00;
+  transform: translateY(-1px);
+  transition: ease-in-out;
+}
+
+.login-btn::after {
+  display: none;
+}
+
 /* Dropdown arrow */
 .dropdown-arrow {
   font-size: 12px;
@@ -218,6 +256,22 @@ body {
   color: #ffffff;
 }
 
+/* Mobile login button */
+.mobile-login-btn {
+  background: #ff7b00;
+  color: black !important;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  border: 2px solid #ff7b00;
+  margin-top: 20px;
+}
+.mobile-login-btn span {
+  padding: 10px;
+}
 /* Mobile dropdown */
 .mobile-dropdown {
   text-align: center;
@@ -294,6 +348,10 @@ body {
 
   .nav-container {
     padding: 0 15px;
+  }
+
+  .login-btn {
+    visibility: hidden;
   }
 }
 
