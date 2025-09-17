@@ -3,11 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Bootstrap's link-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    />
+
     <!--Custom css link-->
     <link rel="stylesheet" href="assets/css/es_style.css" />
     <!--Font's link-->
@@ -22,1167 +18,1197 @@
       src="https://kit.fontawesome.com/7c7471db46.js"
       crossorigin="anonymous"
     ></script>
-    <!--Swiper's link-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <title>ES Turkey</title>
-  	<style>
-<!--
-table.MsoTableGrid
-	{border:1.0pt solid windowtext;
-	font-size:11.0pt;
-	font-family:"Aptos",sans-serif;
-	}
--->
-</style>
+    <title>ES Turkey 2026 - Regulations</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(
+          180deg,
+          #191919 0%,
+          #3b120e 25%,
+          #512e00 75%,
+          #120a15 100%
+        );
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+		margin-top: 80px;
+        color: white;
+        padding: 60px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .header h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .header .location {
+        font-size: 1.8rem;
+        opacity: 0.9;
+        font-weight: 300;
+        margin-bottom: 10px;
+      }
+
+      .header .date {
+        font-size: 1.4rem;
+        opacity: 0.8;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 10px 20px;
+        border-radius: 25px;
+        display: inline-block;
+      }
+
+      .content {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+      }
+
+      .section {
+        padding: 40px;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .section:last-child {
+        border-bottom: none;
+      }
+
+      .section-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .section-icon {
+        width: 55px;
+        height: 55px;
+        background: linear-gradient(135deg, #e74c3c, #c0392b);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        color: white;
+        font-size: 1.6rem;
+        box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #2c3e50;
+      }
+
+      .highlight-box {
+        background: linear-gradient(135deg, #e74c3c, #c0392b);
+        color: white;
+        padding: 35px;
+        border-radius: 15px;
+        text-align: center;
+        margin: 30px 0;
+        box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
+      }
+
+      .highlight-box h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .prize-amount {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin: 25px 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .age-groups {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+      }
+
+      .age-badge {
+        background: linear-gradient(135deg, #8e44ad, #9b59b6);
+        color: white;
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        box-shadow: 0 3px 10px rgba(142, 68, 173, 0.3);
+      }
+
+      .format-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+      }
+
+      .format-badge {
+        background: linear-gradient(135deg, #16a085, #1abc9c);
+        color: white;
+        padding: 15px 25px;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 1.2rem;
+        box-shadow: 0 4px 12px rgba(22, 160, 133, 0.3);
+      }
+
+      .category-badges {
+        text-align: center;
+      }
+
+      .category-badge {
+        background: linear-gradient(135deg, #e74c3c, #c0392b);
+        color: white;
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-weight: 600;
+        margin: 5px;
+        display: inline-block;
+        box-shadow: 0 3px 10px rgba(231, 76, 60, 0.2);
+      }
+
+      .criteria-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin: 30px 0;
+      }
+
+      .criteria-item {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: white;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+      }
+
+      .criteria-points {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin: 30px 0;
+      }
+
+      .price-card {
+        background: linear-gradient(135deg, #2c3e50, #34495e);
+        color: white;
+        padding: 35px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(44, 62, 80, 0.3);
+      }
+
+      .price-card h4 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+
+      .price-amount {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin: 20px 0;
+        color: #f39c12;
+      }
+
+      .info-card {
+        background: #f8f9fa;
+        border-radius: 12px;
+        padding: 30px;
+        margin: 20px 0;
+        border-left: 5px solid #e74c3c;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .info-card h4 {
+        color: #2c3e50;
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+      }
+
+      .info-card p,
+      .info-card ul {
+        color: #555;
+        line-height: 1.7;
+      }
+
+      .info-card ul {
+        margin: 15px 0;
+        padding-left: 25px;
+      }
+
+      .info-card li {
+        margin-bottom: 8px;
+      }
+
+      .hotel-showcase {
+        background: linear-gradient(135deg, #f39c12, #e67e22);
+        color: white;
+        padding: 40px;
+        border-radius: 20px;
+        margin: 30px 0;
+        box-shadow: 0 10px 30px rgba(243, 156, 18, 0.3);
+      }
+
+      .hotel-showcase h3 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .hotel-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .feature-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 25px;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .feature-card h5 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+
+      .included-box {
+        background: linear-gradient(135deg, #27ae60, #2ecc71);
+        color: white;
+        padding: 35px;
+        border-radius: 15px;
+        margin: 30px 0;
+        box-shadow: 0 8px 25px rgba(39, 174, 96, 0.3);
+      }
+
+      .included-box h4 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+        text-align: center;
+      }
+
+      .included-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+      }
+
+      .included-item {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .included-item::before {
+        content: "✓";
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      .warning-box {
+        background: #fff3cd;
+        border: 1px solid #ffeaa7;
+        border-radius: 10px;
+        padding: 25px;
+        margin: 20px 0;
+        color: #856404;
+      }
+
+      .warning-box strong {
+        color: #b45309;
+      }
+
+      .legal-text {
+        background: #f1f3f4;
+        border-radius: 12px;
+        padding: 30px;
+        margin: 25px 0;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: #444;
+      }
+
+      .company-note {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 20px;
+        margin: 25px 0;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        color: #1976d2;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #666;
+        font-size: 1.1rem;
+      }
+
+      .contact-icon {
+        width: 45px;
+        height: 45px;
+        background: #e74c3c;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      .apply-button {
+        background: linear-gradient(135deg, #e74c3c, #c0392b);
+        color: white;
+        padding: 20px 40px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.3rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        margin: 25px auto;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+      }
+
+      .apply-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(231, 76, 60, 0.4);
+      }
+
+      .technical-specs {
+        background: linear-gradient(135deg, #9b59b6, #8e44ad);
+        color: white;
+        padding: 35px;
+        border-radius: 15px;
+        margin: 30px 0;
+        box-shadow: 0 8px 25px rgba(155, 89, 182, 0.3);
+      }
+
+      .technical-specs h4 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .spec-item {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .spec-icon {
+        width: 35px;
+        height: 35px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+      }
+
+      .deadline-box {
+        background: linear-gradient(135deg, #e67e22, #d35400);
+        color: white;
+        padding: 35px;
+        border-radius: 15px;
+        text-align: center;
+        margin: 30px 0;
+        box-shadow: 0 10px 30px rgba(230, 126, 34, 0.3);
+      }
+
+      .deadline-box h3 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+      }
+
+      .deadline-date {
+        font-size: 2.8rem;
+        font-weight: 800;
+        margin: 15px 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .awards-section {
+        background: linear-gradient(135deg, #f1c40f, #f39c12);
+        color: white;
+        padding: 40px;
+        border-radius: 20px;
+        margin: 30px 0;
+        box-shadow: 0 10px 30px rgba(241, 196, 15, 0.3);
+      }
+
+      .awards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+      }
+
+      .award-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .award-card h5 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+      }
+	  .contact-item a {
+		text-decoration: none;
+		color: #333;
+	  }
+      .award-places {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #fff;
+        margin: 10px 0;
+      }
+	   
+
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2.5rem;
+        }
+
+        .header .location {
+          font-size: 1.4rem;
+        }
+
+        .section {
+          padding: 25px;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+
+        .container {
+          padding: 15px;
+        }
+
+        .section-header {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .section-icon {
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+
+        .pricing-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hotel-features {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .header h1 {
+          font-size: 2rem;
+        }
+
+        .prize-amount {
+          font-size: 2.8rem;
+        }
+
+        .price-amount {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
   </head>
   <body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar-container">
+        <!-- Logo -->
+        <div class="navbar-logo">
+          <img
+            src="assets/images/logo_es_white.svg"
+            alt=""
+            width="80"
+            height="40"
+            fill="none"
+          />
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="navbar-menu">
+          <li><a href="https://space4dance.netlify.app">Home</a></li>
+          <li><a href="riga.html">Riga 2026</a></li>
+          <li><a href="turkey.html">Turkey 2026</a></li>
+        </ul>
+
+        <!-- Icons -->
+        <div class="navbar-icons">
+          <a href="#" class="navbar-icon btn sign-in-btn" title="Sign In">
+            <i class="fas fa-user"></i>
+            <span>Log In</span>
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button class="navbar-toggle" id="navbar-toggle">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-content">
+        <ul class="mobile-menu-links">
+          <li><a href="https://space4dance.netlify.app">Home</a></li>
+          <li><a href="riga.html">Riga 2026</a></li>
+          <li><a href="turkey.html">Turkey 2026</a></li>
+        </ul>
+
+        <div class="mobile-menu-icons">
+          <a href="#" class="mobile-menu-icon btn sign-in-btn" title="Sign In">
+            <i class="fas fa-user"></i>
+            <span>Log In</span>
+          </a>
+        </div>
+      </div>
+    </div>
     <!--Turkey REGULATIONS-->
-    <section
-      class="section-padding privacy"
-      style="background-color: white; color: black; padding-top: 100px"
-    >
-      <div class="container">
-        <div class="header">
-          <h1>EUROPESTAGE T&#252;rkiye 2026</h1>
-          <h6>30 APRIL - 6 MAY 2026, ANTALYA, T&#252;rkiye X-BELEK HOTEL</h6>
-			<div align="center">
-			<table border="0" 
-    style="border-collapse: collapse; width:99%; border-left-width:0px; border-right-width:0px; border-top-width:0px" 
-    width="100%">
-				<tr>
-					<td width="50%" colspan="2" 
-     style="border-style: none; border-width: medium" valign="top">&nbsp;</td>
-				</tr>
-				<tr>
-					<td width="50%" colspan="2" 
-     style="border-style: none; border-width: medium" valign="top">For the purposes of these Terms and 
-					Conditions, all references to Europestage also mean TK 
-					Events SIA, the company owning the Europestage brand.<p>
-					<font color="#D81410">Bu H&#252;k&#252;m ve Ko&#351;ullar&#305;n ama&#231;lar&#305; 
-					do&#287;rultusunda, Europestage'a yap&#305;lan t&#252;m at&#305;flar, 
-					Europestage markas&#305;n&#305;n sahibi olan TK Events SIA &#351;irketini 
-					de ifade eder.</font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top"><b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					COMPETITION DATE: </span></b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif; font-weight:700">
-					Saturday 3 May 2026</span></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					<font color="#D81410">YARI&#350;MA TARIHI:</font></span></b><span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif; font-weight:700">
-					<font color="#D81410">3 May&#305;s 2026 Cumartesi</font></span></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0"><b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					VENUE</span></b></p>
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					<font color="#D81410">MEKAN:</font></span></b></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p class="MsoNormal" 
-     style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<span style="font-family: 'Aptos Display',sans-serif"><b>THE X-BELEX 
-					HOTEL,</b> </span></p>
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					A. Oazarci Mahalesi 1001 5 4 Antalya Province/Kadriye 
-					Mahallesi</span></td>
-				</tr>
-	<!--	/*<tr>
-					<td width="25%" 
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <h1>EUROPESTAGE TURKEY 2026</h1>
+        <div class="location">X-Belek Hotel, Antalya, Turkey</div>
+        <div class="date">30 April - 6 May 2026</div>
+      </div>
 
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 6px; margin-bottom: 6px"><b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					CLOSING DATE: Monday, 3 March 2025</span></b></td>
-					<td width="25%" 
-     
+      <!-- Main Content -->
+      <div class="content">
+        <!-- Company Note -->
+        <div class="section">
+          <div class="company-note">
+            <strong>Important Note:</strong> For the purposes of these Terms and
+            Conditions, all references to Europestage also mean TK Events SIA,
+            the company owning the Europestage brand.
+          </div>
+        </div>
 
+        <!-- Age Groups -->
+        <div class="section">
+          <div class="section-header">
+            <h2 class="section-title">Age Groups</h2>
+          </div>
+          <div class="age-groups">
+            <div class="age-badge">3-4</div>
+            <div class="age-badge">5-6</div>
+            <div class="age-badge">7-9</div>
+            <div class="age-badge">10-12</div>
+            <div class="age-badge">13-15</div>
+            <div class="age-badge">16-18</div>
+            <div class="age-badge">ADULTS</div>
+            <div class="age-badge">MIX (determined by average age)</div>
+          </div>
+        </div>
 
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 6px; margin-bottom: 6px">
-					<b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					<font color="#D81410">KAPANI&#350; TAR&#304;H&#304;: Pazartesi, 3 Mart 2025 </font></span></b></td>
-				</tr>
-				*/ -->		
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 6px; margin-bottom: 6px"><b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					AGE GROUPS</span></b><p style="line-height: 150%; margin-top: 6px; margin-bottom: 6px">
-					<b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					<font color="#D81410">YA&#350; GRUPLARI:</font></span></b></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 6px; margin-bottom: 6px"><b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					Provisional Timing</span></b><p style="line-height: 150%; margin-top: 6px; margin-bottom: 6px">
-					<b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					<font color="#D81410">&#214n g&#246r&#252;len Zamanlama Saatleri.</font></span></b></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					3 - 4 </span></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<span style="font-family: 'Aptos Display',sans-serif">
-					Morning session</span></p>
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					<font color="#D81410">Sabah oturumu </font> </span></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<span style="font-family: 'Aptos Display',sans-serif">5 - 6</span></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<span style="font-family: 'Aptos Display',sans-serif">
-					Morning session</span></p>
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<font color="#D81410">
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					Sabah oturumu </span></font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<span style="font-family: 'Aptos Display',sans-serif">7 - 9</span></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<span style="font-family: 'Aptos Display',sans-serif">Lunch 
-					time</span></p>
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<font color="#D81410">
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					&#214&#287;le zaman&#305;.</span></font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<span style="font-family: 'Aptos Display',sans-serif">10 - 
-					12</span></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<span style="font-family: 'Aptos Display',sans-serif">Early 
-					afternoon</span></p>
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<font color="#D81410">
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					&#214&#287;leden sonra erken saatlerde</span></font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<span style="font-family: 'Aptos Display',sans-serif">13 - 
-					15</span></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<span style="font-family: 'Aptos Display',sans-serif">Late 
-					afternoon</span></p>
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<font color="#D81410">
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					&#214&#287;leden sonra ileri saatlerde</span></font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<span style="font-family: 'Aptos Display',sans-serif">16 - 
-					18</span></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<span style="font-family: 'Aptos Display',sans-serif">Early 
-					evening</span></p>
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<font color="#D81410">
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					Ak&#351;am&#305;n ilk saatleri</span></font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<span style="font-family: 'Aptos Display',sans-serif">Adults</span></p>
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<font color="#D81410">
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					Yeti&#351;kinler</span></font></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<span style="font-family: 'Aptos Display',sans-serif">
-					Evening</span></p>
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<font color="#D81410">
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					Ak&#351;am saatleri</span></font></td>
-				</tr>
-				<tr>
-					<td width="50%" 
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     colspan="2" valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					MIX (determined by average age)</span></p>
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<font color="#D81410">
-					<span lang="DE" 
-     style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					KARMA (ortalama ya&#351;a g&#246re belirlenir).</span></font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					FORMAT:</span></b></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					<font color="#D81410">FORMAT:</font></span></b></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-          <ul>
-            <li>GROUP</li>
-            <li>SOLO </li>
-            <li>DUO </li>
-            <li>TRIO</li>
-          </ul>
-        			</td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-          <ul>
-            <li><font color="#D81410">
-			<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-			GRUP</span></font></li>
-            <li><font color="#D81410">
-			<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-			SOLO</span></font></li>
-            <li><font color="#D81410">
-			<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-			DUO (&#304;kili)</span></font></li>
-            <li><font color="#D81410">
-			<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-			TRIO (&#220;&#231;l&#252;) </span></font></li>
-          </ul>
-        			</td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<b>CATEGORY:</b></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<b><font color="#D81410">
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					KATEGOR&#304;:</span></font></b></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-          <ul>
-            <li>KIDS DANCE</li>
-            <li>FOLK DANCE</li>
-            <li>FOLK-STYLE DANCE</li>
-            <li>STAGE DANCE</li>
-            <li>CONTEMP &amp; JAZZ-MODERN</li>
-            <li>HIP HOP &amp; URBAN</li>
-          </ul>
-        			</td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-          <ul>
-            <li><font color="#D81410">
-			<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-			&#199;OCUK DANSI</span></font></li>
-            <li><font color="#D81410">
-			<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-			FOLK DANSI</span></font></li>
-            <li><font color="#D81410">
-			<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-			HALK TARZI DANS</span></font></li>
-            <li><font color="#D81410">
-			<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-			SAHNE DANSI</span></font></li>
-            <li><font color="#D81410">
-			<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-			CONTEMP &amp; JAZZ-MODERN</span></font></li>
-            <li><font color="#D81410">HIP HOP &amp; KENTSEL</font></li>
-          </ul>
-        			</td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					JUDGING USING THE OLYMPIC SCORING SYSTEM:</span></b></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<font color="#D81410"><b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					OLI&#775;MPI&#775;K PUANLAMA SI&#775;STEMI&#775;NI&#775; KULLANARAK DE&#286;ERLENDI&#775;RME:</span></b></font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p class="MsoNormal">
-					<span style="font-family: 'Aptos Display',sans-serif">Using 
-					the Olympic scoring systems; one highest and one lowest 
-					score are eliminated, the points awarded for each dance will 
-					be the aggregate of the remaining three scores </span>
-					<span style="font-family: 'Aptos Display',sans-serif; font-size: 11pt">
-					. </span>
-					<p class="MsoNormal">
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					Each Judge evaluates and scores each performance 
-					with a maximum of 100 points as follows:&nbsp; </span></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p class="MsoNormal"><font color="#D81410">
-					<span style="font-family: 'Aptos Display',sans-serif">
-					Olimpiyat puanlama sistemleri kullan&#305;larak; en y&#252;ksek ve en 
-					d&#252;&#351;&#252;k puanlardan biri elenir, her dans i&#231;in verilen puanlar 
-					kalan &#252;&#231; kriterin puan&#305;n toplam&#305; olacakt&#305;r. </span>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">&nbsp; 
-					</span></font>
-					<p class="MsoNormal"><font color="#D81410">
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">Her bir J&#252;ri &#220;yesi, her bir performans&#305; a&#351;a&#287;&#305;daki &#351;ekilde 
-					de&#287;erlendirir. Maksium puan 100 puand&#305;r. Puan alabilece&#287;iniz 
-					kriterler a&#351;a&#287;&#305;dad&#305;r;</span></font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					Criteria [Max Points available]</span></b></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<font color="#D81410"><b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					Kriterler [Kullan&#305;labilir Maksimum Puan]</span></b></font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<ul>
-						<li>
-						<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-						Technique [30]</span></li>
-						<li>
-						<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-						Choreography [30]</span></li>
-						<li>
-						<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-						Presentation [20]</span></li>
-						<li>
-						<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-						Musicality [20]</span></li>
-					</ul>
-					</td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<ul>
-						<li><font color="#D81410">
-						<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-						Teknik [30]</span></font></li>
-						<li><font color="#D81410">
-						<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-						Koreografi [30]</span></font></li>
-						<li><font color="#D81410">
-						<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-						Sunum [20]</span></font></li>
-						<li><font color="#D81410">
-						<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-						M&#252;zikalite [20]</span></font></li>
-					</ul>
-					</td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					AWARDS:</span></b></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<font color="#D81410"><b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					&#214;D&#220;LLER</span></b></font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px">
-					<ul>
-						<li>Winning Performances (1, 2 and 3 places) awarded with 
-						Diplomas and Trophies</li>
-						<li>Runners-up (4, 5 and 6 places) awarded with Diplomas and 
-						Large Medals</li>
-						<li>Performances are scored within their own declared 
-						nomination: Age Group and Category</li>
-						<li>Places can be duplicated in each Age Group and Category</li>
-					</ul>
-					</td>
-					<td width="25%" 
-     
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px">
-					<ul>
-						<li><font color="#D81410"><span lang="DE" 
-      style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-						Kazanan Performanslar (1, 2 ve 3'&#252;nc&#252;ler) Diploma ve 
-						Kupa ile &#246;d&#252;llendirilir.</span></font></li>
-						<li><font color="#D81410"><span lang="DE" 
-      style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-						&#304;kinciler (4, 5 ve 6. s&#305;ralar) Diploma ve B&#252;y&#252;k Madalya 
-						ile &#246;d&#252;llendirilir.</span></font></li>
-						<li><font color="#D81410"><span lang="DE" 
-      style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-						Performanslar, ilan edilen kendi adayl&#305;klar&#305; dahilinde 
-						puanlan&#305;r: Ya&#351; Grubu ve Kategori</span></font></li>
-						<li><font color="#D81410"><span lang="DE" 
-      style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-						Her Ya&#351; Grubu ve Kategoride yar&#305;&#351;mac&#305;lar 
-						&#231;o&#287;alt&#305;labilir.</span></font></li>
-					</ul>
-					</td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					CASH or CASH EQUIVALENT PRIZES:</span></b></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<font color="#D81410"><b><span lang="DE" 
-     style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					NAK&#304;T veya NAK&#304;T E&#350;DE&#286;ER&#304; &#214;D&#220;LLER</span></b></font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					The top scoring performance (with the highest number of 
-					points out of all categories) IN EACH AGE GROUP, will 
-					receive a </span><b>
-					<span style="font-family: 'Aptos Display',sans-serif">&#8364;200</span></b><span 
-     style="font-family: 'Aptos Display',sans-serif"> (two hundred Euros) cash 
-					prize</span><span 
-     style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">.&nbsp; 
-					In case of a tie, it will be up to the Judges to determine 
-					the winner.</span></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<font color="#D81410">
-					<span style="font-family: 'Aptos Display',sans-serif; font-size: 11pt">
-					HER YA&#350; GRUBUNDA en y&#252;ksek puan&#305; alan performans (t&#252;m 
-					kategoriler aras&#305;nda en y&#252;ksek puana sahip) 200 &#8364; (iki y&#252;z 
-					Euro) nakit &#246;d&#252;l alacak. </span>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					E&#351;itlik durumunda, kazanan&#305; belirlemek J&#252;riye kalacakt&#305;r.</span></font></td>
-				</tr>
-				<tr>
-				<!--	/*<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<b>DEADLINE</b></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<b><font color="#D81410">SON</font></b></td>
-				</tr> */ --> 
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					COMPETITION DATE: Saturday, 3 May 2025</td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					<font color="#D81410">YARI&#350;MA TARIHI: </font></span></b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif; font-weight:700">
-					<font color="#D81410">3 May&#305;s 2025 Cumartesi</font></span></td>
-				</tr>
-			<!--/*
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%"><b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					CLOSING DATE</span></b><strong>: Monday, 3 March 2025</strong> <br />
-            After the closing date or earlier once new applications are closed 
-			you can still sign up for our waiting list; should a suitable space 
-			become available we will make an offer for you to consider at the 
-			time.</td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0"><b>
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					<font color="#D81410">
-					KAPANI&#350; TAR&#304;H&#304;: Pazartesi, 3 Mart 2025</font></span></b></p>
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<font color="#D81410">
-					<span style="font-size: 11.0pt; line-height: 107%; font-family: 'Aptos Display',sans-serif">
-					Kapan&#305;&#351; tarihinden sonra veya yeni ba&#351;vurular kapand&#305;ktan 
-					sonra bekleme listemize kaydolabilirsiniz; uygun bir yer 
-					olmas&#305; durumunda, o zaman de&#287;erlendirmeniz i&#231;in size bir 
-					teklifte bulunaca&#287;&#305;z.</span></font></td>
-				</tr>
-				*/ -->
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<blockquote>
-						<p>APPLICATION<br>
-						To apply, please: <br>
-						1. visit our website https://welovedanc.ing <br>
-						2. select the Turkish event<br>
-						3. sign into your account (or create one if you do not 
-						have a Europestage online account) <br>
-						4. Complete the other forms on your Dashboard:<br>
-						a. performance details<br>
-						b. competitors' names and DOB. In the event of any 
-						queries Europestage reserve the right to inspect 
-						documentation.<br>
-						c. upload your soundtracks and visual backgrounds via 
-						the media library link<br>
-&nbsp;</p>
-					</blockquote>
-					</td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<font color="#D81410">BA&#350;VURU<br>
-					Ba&#351;vurmak i&#231;in l&#252;tfen: <br>
-					1. web sitemizi ziyaret edin https://welovedanc.ing <br>
-					2. T&#252;rkiye etkinli&#287;ini se&#231;in.<br>
-					3. hesab&#305;n&#305;zda oturum a&#231;&#305;n. (veya Europestage &#231;evrimi&#231;i 
-					hesab&#305;n&#305;z yoksa bir tane olu&#351;turun.)<br>
-					4. Kontrol Panelinizdeki di&#287;er formlar&#305; doldurun:<br>
-					a. performans detaylar&#305;<br>
-					b. yar&#305;&#351;mac&#305;lar&#305;n isimleri ve do&#287;um tarihi. Herhangi bir 
-					soru olmas&#305; durumunda Europestage belgeleri inceleme hakk&#305;n&#305; 
-					sakl&#305; tutar.<br>
-					c. medya k&#252;t&#252;phanesi ba&#287;lant&#305;s&#305; &#252;zerinden dans m&#252;ziklerinizi 
-					ve g&#246;rsel arka planlar&#305;n&#305;z&#305; y&#252;kleyin.</font><br>
-&nbsp;</td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p class="MsoNormal"><b>
-					<span style="font-family: 'Aptos Display',sans-serif">
-					COPYRIGHT AND MEDIA CONTENT</span></b></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p class="MsoNormal"><font color="#D81410"><b>
-					<span lang="DE" 
-     style="font-family: 'Aptos Display',sans-serif">TELIF HAKKI VE MEDYA 
-					I&#231;ERI&#286;I</span></b></font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					By submitting your application, you and all the individual 
-					dancers listed as Competitors on the online dashboard 
-					section and allocated to a Performance on the dashboard 
-					section, give your expressed permission to allow Europestage 
-					and/or its accredited partners to photograph and take video 
-					shots on stage and at other locations during the competition 
-					days. You also agree that this material may be used for 
-					website and other promotional purposes by Europestage and/or 
-					its accredited partners and that the copyrights related to 
-					this material belongs to TK Events SIA.<br>
-&nbsp;</p>
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					By submitting your application, you also confirm that your 
-					dance performance(s) do not infringe the copyright or 
-					intellectual property rights of any other person, dance 
-					studio or organisation here or worldwide. To protect the 
-					integrity of the competition and promote the creativity of 
-					others in the dance world we take any infringements of this 
-					condition very seriously indeed. If you are discovered to be 
-					in breach of this rule your act will be expelled from the 
-					competition without refund. We also reserve the right to 
-					take further action, after the competition has finished.<br>
-&nbsp;</p>
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					This is a family friendly competition and sound, lyrics, and 
-					video content must bear this in mind. Any inappropriate 
-					content, including bad language, as determined by the judges 
-					may result in the performance being disqualified without 
-					refund. Judges' decision is final.<br>
-&nbsp;</td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<font color="#D81410">Ba&#351;vurunuzu g&#246;ndererek, siz ve 
-					&#231;evrimi&#231;i pano b&#246;l&#252;m&#252;nde Yar&#305;&#351;mac&#305; olarak listelenen ve pano 
-					b&#246;l&#252;m&#252;nde bir Performansa tahsis edilen t&#252;m bireysel 
-					dans&#231;&#305;lar, Europestage ve/veya akredite ortaklar&#305;n&#305;n yar&#305;&#351;ma 
-					g&#252;nleri boyunca sahnede ve di&#287;er yerlerde foto&#287;raf ve video 
-					&#231;ekimi yapmas&#305;na izin verdi&#287;inizi a&#231;&#305;k&#231;a belirtmi&#351; olursunuz. 
-					Ayr&#305;ca, bu materyalin Europestage ve/veya akredite ortaklar&#305; 
-					taraf&#305;ndan web sitesi ve di&#287;er tan&#305;t&#305;m ama&#231;lar&#305; i&#231;in 
-					kullan&#305;labilece&#287;ini ve bu materyalle ilgili telif haklar&#305;n&#305;n 
-					TK Events SIA'ya ait oldu&#287;unu kabul edersiniz.<br>
-&nbsp;</font></p>
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<font color="#D81410">Ba&#351;vurunuzu g&#246;ndererek, dans 
-					performans(lar)&#305;n&#305;z&#305;n burada veya d&#252;nya &#231;ap&#305;nda ba&#351;ka 
-					herhangi bir ki&#351;i, dans st&#252;dyosu veya kurulu&#351;un telif hakk&#305; 
-					veya fikri m&#252;lkiyet haklar&#305;n&#305; ihlal etmedi&#287;ini de onaylam&#305;&#351; 
-					olursunuz. Yar&#305;&#351;man&#305;n b&#252;t&#252;nl&#252;&#287;&#252;n&#252; korumak ve dans 
-					d&#252;nyas&#305;ndaki di&#287;er ki&#351;ilerin yarat&#305;c&#305;l&#305;&#287;&#305;n&#305; te&#351;vik etmek 
-					i&#231;in bu ko&#351;ulun ihlal edilmesini &#231;ok ciddiye al&#305;yoruz. Bu 
-					kural&#305; ihlal etti&#287;iniz tespit edilirse, g&#246;steriniz para 
-					iadesi yap&#305;lmaks&#305;z&#305;n yar&#305;&#351;madan ihra&#231; edilecektir. Ayr&#305;ca, 
-					yar&#305;&#351;ma bittikten sonra ba&#351;ka &#246;nlemler alma hakk&#305;m&#305;z&#305; da 
-					sakl&#305; tutuyoruz.<br>
-&nbsp;</font></p>
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<font color="#D81410">Bu, aile dostu bir yar&#305;&#351;mad&#305;r ve ses, 
-					&#351;ark&#305; s&#246;zleri ve video i&#231;eri&#287;i bunu g&#246;z &#246;n&#252;nde 
-					bulundurmal&#305;d&#305;r. J&#252;ri taraf&#305;ndan belirlenen k&#246;t&#252; dil de 
-					dahil olmak &#252;zere herhangi bir uygunsuz i&#231;erik, performans&#305;n 
-					geri &#246;demesiz olarak diskalifiye edilmesine neden olabilir. 
-					J&#252;rinin karar&#305; nihaidir.<br>
-&nbsp;</font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p class="MsoNormal"><b>
-					<span style="font-family: 'Aptos Display',sans-serif">
-					TECHNICAL SPECS</span></b></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p class="MsoNormal"><font color="#D81410"><b>
-					<span lang="DE" 
-     style="font-family: 'Aptos Display',sans-serif">TEKNI&#775;K &#214;ZELLI&#775;KLER</span></b></font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					Stage: <br>
-					Width: 20m * Depth: 10m * Height: 10m. <br>
-					Working area: width: 16m * depth: 8m * height: 7m<br>
-					Professional Sound &amp; Lights equipment<br>
-					Stage flooring: professional vinyl<br>
-					Each competitor can use our stage LED screen for video &amp; 
-					photo visualisation during their performance. The media 
-					files must be uploaded during the application process in 
-					your online account.<br>
-					Video format: MP4, MOV, AVI<br>
-					Photo format: JPG/JPEG and PNG<br>
-&nbsp;</td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<font color="#D81410">Sahne: <br>
-					Geni&#351;lik: 20m * Derinlik: 10m * Y&#252;kseklik: 10m. <br>
-					&#231;al&#305;&#351;ma alan&#305;: geni&#351;lik: 16m * derinlik: 8m * y&#252;kseklik: 7m<br>
-					Profesyonel Ses ve I&#351;&#305;k ekipmanlar&#305;.<br>
-					Sahne zemini: Profesyonel vinil<br>
-					Her yar&#305;&#351;mac&#305;, performanslar&#305; s&#305;ras&#305;nda video ve foto&#287;raf 
-					g&#246;rselle&#351;tirmesi i&#231;in sahne LED ekran&#305;m&#305;z&#305; kullanabilir. 
-					Medya dosyalar&#305;, ba&#351;vuru s&#252;recinde &#231;evrimi&#231;i hesab&#305;n&#305;za 
-					y&#252;klenmelidir.<br>
-					Video format&#305;: MP4, MOV, AVI<br>
-					Foto&#287;raf format&#305;: JPG/JPEG ve PNG<br>
-&nbsp;</font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p class="MsoNormal"><b>
-					<span style="font-family: 'Aptos Display',sans-serif">PRICE
-					</span></b>
-					<span style="font-family: 'Aptos Display',sans-serif">(Full 
-					Payment due by closing date:&nbsp; 3<sup> </sup>March 2025.&nbsp; IBAN 
-					details shown on invoice via dashboard)</span></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p class="MsoNormal"><font color="#D81410"><b>
-					<span lang="DE" 
-     style="font-family: 'Aptos Display',sans-serif">F&#304;YAT </span></b>
-					<span lang="DE" 
-     style="font-family: 'Aptos Display',sans-serif">(&#214;demenin tamam&#305; kapan&#305;&#351; 
-					tarihine kadar yap&#305;lmal&#305;d&#305;r: 3<sup> </sup>&nbsp;Mart 2025.&nbsp; IBAN 
-					bilgileri faturada g&#246;sterge paneli &#252;zerinden g&#246;sterilir.)</span></font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					Registration fee (per competitor): <br>
-					Dance Format Price in Euro per competitor<br>
-					Group 1st Dance &#8364;20 2 or more (each) &#8364;15<br>
-					Solo 1st Dance &#8364;50 2 or more (each) &#8364;45<br>
-					Duo 1st Dance &#8364;40 2 or more (each) &#8364;30<br>
-					Trio 1st Dance &#8364;40 2 or more (each) &#8364;30</td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<font color="#D81410">Kay&#305;t &#252;creti (yar&#305;&#351;mac&#305; ba&#351;&#305;na):
-					</font></p>
-					<p style="line-height: 150%; margin-top: 0; margin-bottom: 0">
-					<font color="#D81410">Dans Format&#305; Rakip ba&#351;&#305;na Euro 
-					cinsinden fiyat<br>
-					Grup
-					1st Dans&nbsp; &#8364;20 2 veya daha fazla (her biri) dans i&#231;in. &#8364;15<br>
-					Solo 
-					1st Dans&nbsp; &#8364;50 2 veya daha fazla (her biri) dans i&#231;in. &#8364;45<br>
-					D&#252;o
-					1st Dans&nbsp; &#8364;40 2 veya daha fazla (her biri) dans i&#231;in. &#8364;30<br>
-					Trio 
-					1st Dans&nbsp; &#8364;40 2 veya daha fazla (her biri) dans i&#231;in. &#8364;30</font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p class="MsoNormal"><b>
-					<span style="font-family: 'Aptos Display',sans-serif">THE X-BELEK 
-					HOTEL ULTRA ALL-INCLUSIVE OFFER</span></b></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p class="MsoNormal"><font color="#D81410"><b>
-					<span style="font-family: 'Aptos Display',sans-serif">X-BELEK 
-					HOTEL ULTRA HER &#350;EY DAHI&#775;L TEKLI&#775;FI&#775;</span></b></font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p class="MsoNormal">
-					<span style="font-family: 'Aptos Display',sans-serif">
-					Dancers, dance studio managers and choreographers and other 
-					team supports and families not residents of the Hotel may 
-					purchase a day-pass at a cost of <b>&#8364;50</b> per person.&nbsp; 
-					This will provide full access to the hotel's amenities and 
-					facilities and to unlimited "free" food and drinks in the 
-					hotel's numerous restaurants, patisseries and snack bars.
-					</span></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p class="MsoNormal"><font color="#D81410">
-					<span style="font-family: 'Aptos Display',sans-serif">
-					Dans&#231;&#305;lar, dans st&#252;dyosu y&#246;neticileri ve koreograflar ile 
-					di&#287;er ekip destek&#231;ileri ve otelde ikamet etmeyen aileler, 
-					ki&#351;i ba&#351;&#305; <b>50 &#8364; </b>kar&#351;&#305;l&#305;&#287;&#305;nda bir g&#252;nl&#252;k ge&#231;i&#351; kart&#305; 
-					sat&#305;n alabilirler.&nbsp; Bu kart, otelin olanak ve tesislerine 
-					tam eri&#351;im ve otelin &#231;ok say&#305;daki restoran, pastane ve snack 
-					bar&#305;nda s&#305;n&#305;rs&#305;z &quot;&#252;cretsiz&quot; yiyecek ve i&#231;ecek imkan&#305; 
-					sa&#287;layacakt&#305;r. </span></font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p class="MsoNormal"><b>
-					<span style="font-family: 'Aptos Display',sans-serif">
-					CONTACTS</span></b></td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<p class="MsoNormal"><font color="#D81410"><b>
-					<span style="font-family: 'Aptos Display',sans-serif">
-					&#304;LET&#304;&#350;&#304;M</span></b></font></td>
-				</tr>
-				<tr>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					info@welovedanc.ing<br>
-					Instagram: @europestage<br>
-					Facebook: europestagelatvia<br>
-					Website: https://welovedanc.ing</td>
-					<td width="25%" 
-     
-     style="text-align: left; border-left-style:none; border-left-width:medium; border-right-style:none; border-right-width:medium; border-top-style:none; border-top-width:medium; border-bottom-style:solid; border-bottom-width:1px" 
-     valign="top">
-					<font color="#D81410">info@welovedanc.ing<br>
-					Instagram: @europestage<br>
-					Facebook: europestagelatvia<br>
-					Web sitesi: https://welovedanc.ing</font></td>
-				</tr>
-			</table>
-			</div>
-			</div>
-        <div class="paragraph">
-          <div
-            class="container btn-area d-flex text-center align-items-center justify-content-center"
-          >
-            <div class="row btn-area">
-              <div class="col-lg-12">
-                <div class="regul-btn">
-                  <a href="https://europestage.dance/studios2025/tr/signin.asp"
-                    >COMPETE</a
-                  >
-                </div>
+        <!-- Format -->
+        <div class="section">
+          <div class="section-header">
+            <h2 class="section-title">Format</h2>
+          </div>
+          <div class="format-badges">
+            <div class="format-badge">GROUP</div>
+            <div class="format-badge">SOLO</div>
+            <div class="format-badge">DUO</div>
+            <div class="format-badge">TRIO</div>
+          </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="section">
+          <div class="section-header">
+            <h2 class="section-title">Categories</h2>
+          </div>
+          <div class="category-badges">
+            <div class="category-badge">KIDS DANCE</div>
+            <div class="category-badge">FOLK DANCE</div>
+            <div class="category-badge">FOLK-STYLE DANCE</div>
+            <div class="category-badge">STAGE DANCE</div>
+            <div class="category-badge">CONTEMP & JAZZ-MODERN</div>
+            <div class="category-badge">HIP HOP & URBAN</div>
+          </div>
+        </div>
+
+        <!-- Judging & Awards -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <h2 class="section-title">
+              Judging & Awards - Olympic Scoring System
+            </h2>
+          </div>
+
+          <div class="info-card">
+            <h4>Scoring Criteria</h4>
+            <p>
+              Each Judge evaluates and scores each performance with a maximum of
+              100 points based on the following criteria:
+            </p>
+          </div>
+
+          <div class="criteria-grid">
+            <div class="criteria-item">
+              <div class="criteria-points">30</div>
+              <div>Technique</div>
+            </div>
+            <div class="criteria-item">
+              <div class="criteria-points">30</div>
+              <div>Choreography</div>
+            </div>
+            <div class="criteria-item">
+              <div class="criteria-points">20</div>
+              <div>Presentation</div>
+            </div>
+            <div class="criteria-item">
+              <div class="criteria-points">20</div>
+              <div>Musicality</div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h4>Olympic Scoring System</h4>
+            <p>
+              Using the Olympic scoring system where one highest and one lowest
+              scores are eliminated, the points awarded for each dance will be
+              the aggregate of the remaining three scores.
+            </p>
+          </div>
+
+          <div class="awards-section">
+            <h3 style="text-align: center; margin-bottom: 20px">
+              Awards Structure
+            </h3>
+            <div class="awards-grid">
+              <div class="award-card">
+                <h5>Winning Performances</h5>
+                <div class="award-places">1st, 2nd & 3rd Places</div>
+                <p>Awarded with Diplomas and Trophies</p>
+              </div>
+              <div class="award-card">
+                <h5>Runners-up</h5>
+                <div class="award-places">4th, 5th & 6th Places</div>
+                <p>Awarded with Diplomas and Large Medals</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h4>Important Notes</h4>
+            <ul>
+              <li>
+                Performances are scored within their own declared nomination:
+                Age Group and Category
+              </li>
+              <li>Places can be duplicated in each Age Group and Category</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Cash Prizes -->
+        <div class="section">
+          <div class="highlight-box">
+            <h3>Cash Prize</h3>
+            <div class="prize-amount">€200</div>
+            <p>
+              The top scoring performance (with the highest number of points out
+              of all categories) <strong>IN EACH AGE GROUP</strong> will receive
+              a €200 (two hundred euros) cash prize.
+            </p>
+            <p style="margin-top: 15px">
+              <em
+                >In case of a tie, it will be up to the Judges to determine the
+                winner.</em
+              >
+            </p>
+          </div>
+        </div>
+
+        <!-- Deadline -->
+        <div class="section">
+          <div class="deadline-box">
+            <h3>Important Dates</h3>
+            <p><strong>Event Date:</strong></p>
+            <div class="deadline-date">2 May 2026</div>
+            <p><strong>Closing Date:</strong></p>
+            <div class="deadline-date" style="font-size: 2.2rem">
+              15 March 2026
+            </div>
+            <p style="margin-top: 20px; font-size: 1.1rem">
+              After the closing date or earlier once new applications are
+              closed, you can still sign up for our waiting list; should a
+              suitable space become available we will make an offer for you to
+              consider at the time.
+            </p>
+          </div>
+        </div>
+
+        <!-- Application Process -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <h2 class="section-title">Application Process</h2>
+          </div>
+
+          <div class="info-card">
+            <h4>How to Apply</h4>
+            <ol>
+              <li>
+                Visit our website
+                <a href="http://www.space4dance.org" target="_blank"
+                  >www.space4dance.org</a
+                >
+              </li>
+              <li>Select your event</li>
+              <li>
+                Sign into your account (or create one if you do not have
+                Europestage online account)
+              </li>
+              <li>Complete the other forms on your Dashboard:</li>
+              <ul style="margin-top: 10px">
+                <li>Performance details</li>
+                <li>
+                  Competitors' names and DOB. In the event of any queries
+                  Europestage reserve the right to inspect documentation.
+                </li>
+                <li>Upload your sound tracks</li>
+              </ul>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <i class="fas fa-copyright"></i>
+            </div>
+            <h2 class="section-title">Copyright & Legal</h2>
+          </div>
+
+          <div class="legal-text">
+            <h4>Photography & Video Rights</h4>
+            <p>
+              By submitting your application, you and all the individual dancers
+              listed in the Competitors dashboard section and allocated in the
+              Performance dashboard section, give your expressed permission to
+              allow Europestage and/or its accredited partners to photograph and
+              take video shots on stage and other locations during the
+              competition days. You also agree that this material may be used
+              for website and other promotional purposes by Europestage and/or
+              its accredited partners and that the copyrights related to this
+              material belongs to TK Events SIA.
+            </p>
+
+            <h4>Performance Copyright</h4>
+            <p>
+              By submitting your application, you also confirm that your dance
+              performance(s) do not infringe the copyright or intellectual
+              property rights of any other person, dance studio or organisation
+              here or worldwide. To protect the integrity of the competition and
+              promote the creativity of others in the dance world we take any
+              infringements of this condition very seriously indeed. If you are
+              discovered to be in breach of this rule your act will be expelled
+              from the competition without refund. We also reserve the right to
+              take further action, after the competition has finished.
+            </p>
+          </div>
+        </div>
+
+        <!-- Technical Specifications -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <i class="fas fa-cog"></i>
+            </div>
+            <h2 class="section-title">Technical Specifications</h2>
+          </div>
+
+          <div class="technical-specs">
+            <h4>Stage & Equipment</h4>
+            <div class="spec-item">
+              <div class="spec-icon"><i class="fas fa-expand"></i></div>
+              <div>Stage: 16 x 8 meters</div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-icon"><i class="fas fa-volume-up"></i></div>
+              <div>Professional Sound & Lights equipment</div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-icon"><i class="fas fa-layer-group"></i></div>
+              <div>Stage flooring: professional vinyl</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pricing -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <i class="fas fa-euro-sign"></i>
+            </div>
+            <h2 class="section-title">Registration Fees</h2>
+          </div>
+
+          <div class="pricing-grid">
+            <div class="price-card">
+              <h4>Solo</h4>
+              <div class="price-amount">€50</div>
+              <p>2nd dance: €45</p>
+            </div>
+            <div class="price-card">
+              <h4>Duo & Trio</h4>
+              <div class="price-amount">€40</div>
+              <p>2nd dance: €30</p>
+            </div>
+            <div class="price-card">
+              <h4>Group (5+ dancers)</h4>
+              <div class="price-amount">€20</div>
+              <p>2nd dance: €15</p>
+            </div>
+          </div>
+
+          <div class="included-box">
+            <h4>Each Competitor Will Receive</h4>
+            <div class="included-list">
+              <div class="included-item">
+                Personal named "Competitor" Diploma
+              </div>
+              <div class="included-item">"Competitor" Medal</div>
+              <div class="included-item">Europestage branded gift</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Venue -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <i class="fas fa-hotel"></i>
+            </div>
+            <h2 class="section-title">The Venue</h2>
+          </div>
+
+          <div class="hotel-showcase">
+            <h3>X-Belek Hotel</h3>
+            <p
+              style="text-align: center; font-size: 1.3rem; margin-bottom: 30px"
+            >
+              Antalya, Turkey
+            </p>
+
+            <div style="text-align: center; margin-bottom: 30px">
+              <h4 style="font-size: 2rem; margin-bottom: 20px">
+                5-Star Ultra All Inclusive Experience
+              </h4>
+              <p style="font-size: 1.2rem; line-height: 1.6">
+                Fancy a juicy steak? Yep, it's right here. Craving some Sushi?
+                You'll find that too. Or fancy a kid-free date night? There's an
+                adults-only restaurant for some good old couples time.
+              </p>
+              <p style="font-size: 1.2rem; line-height: 1.6; margin-top: 15px">
+                Pools because we all need options, you've got an aqua park for
+                the kids or an adults-only pool where having a cocktail in hand
+                is mandatory!
+              </p>
+              <p style="font-size: 1.2rem; line-height: 1.6; margin-top: 15px">
+                Cocktail games, poolside competitions, and by evening the X
+                Stage Shows will blow you away, world-class, famous DJs. The X
+                Belek is definitely a winner!
+              </p>
+            </div>
+
+            <div class="hotel-features">
+              <div class="feature-card">
+                <h5><i class="fas fa-map-marker-alt"></i> Location</h5>
+                <p>
+                  Just a speedy 5 minutes bus ride to Kadriye Beach - a shuttle
+                  service is provided every half an hour!
+                </p>
+                <p>
+                  A 27-minute bus journey from Antalya Airport - so, you're
+                  27-minutes from a cocktail by the pool...
+                </p>
+                <p>
+                  Thrill seekers, listen up! The Land of Legends Theme Park is
+                  just a quick taxi ride away (extra charge).
+                </p>
+              </div>
+
+              <div class="feature-card">
+                <h5><i class="fas fa-bed"></i> Rooms</h5>
+                <p>
+                  Rooms are split into Family Rooms and Adults Only Rooms, all
+                  the rooms are spacious, chic and full of amenities (including
+                  a full mini-bar with all the holiday essentials, we're looking
+                  at you beer)
+                </p>
+                <p>
+                  Standard Rooms, Standard Adults Room (nothing standard about
+                  these fyi!), Junior Adults Suite, Swim-Up Adults Room, Family
+                  Rooms and Suites
+                </p>
+              </div>
+
+              <div class="feature-card">
+                <h5><i class="fas fa-utensils"></i> Food & Drink</h5>
+                <p>
+                  <strong>Two Main Restaurants</strong> - two packed buffet
+                  restaurants with food stations and show-cooking, the second is
+                  for Adults Only.
+                </p>
+                <p>
+                  <strong>Snack Restaurant</strong> - full of all the holiday
+                  goodies, we're talking pizza, burgers and hot dogs... all the
+                  naughty stuff.
+                </p>
+                <p>
+                  <strong>Beach Snack Bar</strong> - your beach day just got
+                  better with a selection of fast food bites and delicious ice
+                  cream.
+                </p>
+                <p>
+                  <strong>Pool Snack Bar</strong> - poolside snacks all day
+                  long, will you ever go hungry here? Absolutely not.
+                </p>
+                <p>
+                  <strong>Patisserie</strong> - the kids will be nagging to come
+                  here, it's cakes, pastries, cookies, all the sugar galore. We
+                  won't tell the dentist if you don't!
+                </p>
+                <p>
+                  <strong>Seven Bars</strong> for caffeine fixes, holiday
+                  cocktails, ice-cold beer, a bit of vino, or a classic Fanta
+                  Lemon, you'll find it all here. You can even grab your normal
+                  Starbucks order!
+                </p>
+              </div>
+
+              <div class="feature-card">
+                <h5><i class="fas fa-swimmer"></i> Sports & Entertainment</h5>
+                <p>
+                  <strong>Seven swimming pools</strong> - because we all need
+                  options, right? A pool for the active swimmers, pools for the
+                  kiddos to make as much splash as they want and an adults pool
+                  for a peaceful swim or little afternoon snooze
+                </p>
+                <p>
+                  <strong>Aquapark</strong> - not just for the kids, there's
+                  exhilarating slides for the grown-ups too, with a racer slide,
+                  and freefall slides that'll make your stomach drop
+                </p>
+                <p>
+                  <strong>Fitness centre</strong> - very high-tech so if you're
+                  gonna do a workout anywhere, it needs to be here! If you need
+                  a bit of motivation, there are fitness trainers that'll give
+                  you a personalised workout
+                </p>
+                <p>
+                  <strong>Spa</strong> - that'll give you that 'ooooo' 'aaahhhh'
+                  feelin', pamper-yourself-silly with a trip to the sauna, steam
+                  room and Turkish Baths, with a massage or skin care treatment
+                  to finish
+                </p>
+              </div>
+
+              <div class="feature-card">
+                <h5><i class="fas fa-music"></i> Entertainment</h5>
+                <p>
+                  If you're feeling active you've got Pilates, aerobics, Zumba
+                  and gymnastics
+                </p>
+                <p>
+                  Get stuck into the pool games, cocktail games, bingo and
+                  quizzes
+                </p>
+                <p>
+                  Evening shows four times a week, perfect for the whole family
+                  to sit and enjoy
+                </p>
+                <p>
+                  <strong>X Planet Mini Club</strong> - offering a fantastic
+                  entertainment schedule for ages 1 - 8, after a day of fun the
+                  youngsters can head back at 20:30 for the nightly disco
+                </p>
+                <p>
+                  <strong>X Stage Shows</strong> - not your regular bingo, this
+                  is next-level entertainment, with world-class DJs, and famous
+                  singers taking to the stage, Clean Bandit took to the stage in
+                  July (yep, they aren't messing around)
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <div class="header">
-          <h1>HOTEL &amp; ULTRA ALL INCLUSIVE EXPERIENCE</h1>
-          <h6>The X BELEK (5-star Hotel with Ultra All Inclusive)</h6>
+
+        <!-- What's Included -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 class="section-title">What's Included in the Package</h2>
+          </div>
+
+          <div class="included-box">
+            <h4>Your Complete Experience Includes</h4>
+            <div class="included-list">
+              <div class="included-item">
+                Airport transfers (to and from the hotel)
+              </div>
+              <div class="included-item">4 Workshops</div>
+              <div class="included-item">Welcome Party</div>
+              <div class="included-item">Foam Party</div>
+              <div class="included-item">Good-Bye Party</div>
+              <div class="included-item">
+                A La Carte restaurant visit x1 [for adults only]
+              </div>
+              <div class="included-item">
+                Ultra All Inclusive concept [meals, refreshment drinks,
+                ice-cream] + alcohol for adults
+              </div>
+            </div>
+          </div>
+
+          <div class="warning-box">
+            <strong>Important:</strong> Registrations will only be accepted from
+            dancers and their accompanying persons who are on the "Europestage
+            Türkiye 2026" official tour package.
+          </div>
+
+          <div class="warning-box">
+            <strong>Note:</strong> Flight is not included
+          </div>
         </div>
-        <div class="paragraph">
-          <p>
-            Fancy a juicy steak? Yep, it's right here. Craving some Sushi? 
-			You'll find that too. Or fancy a kid-free date night? There's an 
-			adults-only restaurant for some good old couples time.
-          </p>
-          <p>
-            Seven swimming pools because we all need options, you've got an aqua 
-			park for the kids or an adults-only pool where having a cocktail in 
-			hand is mandatory!
-          </p>
-          <p>
-            Cocktail games, poolside competitions, and by evening the X Stage 
-			Shows will blow you away, world-class, famous DJs. The X Belek is 
-			definitely a winner!
-          </p>
-          <h1>Location</h1>
-          <p>
-            Just a speedy 5 minutes bus ride to Kadriye Beach - a shuttle 
-			service is provided every half an hour!
-          </p>
-          <p>
-            A 27-minute bus journey from Antalya Airport - so, you're 27-minutes 
-			from a cocktail by the pool…
-          </p>
-          <p>
-            Thrill seekers, listen up! The Land of Legends Theme Park is just a 
-			quick taxi ride away (extra charge).
-          </p>
-          <h1>Rooms</h1>
-          <p>
-            Rooms are split into Family Rooms and Adults Only Rooms, all the 
-			rooms are spacious, chic and full of amenities (including a full 
-			mini-bar with all the holiday essentials, we're looking at you beer)
-          </p>
-          <p>
-            Standard Rooms, Standard Adults Room (nothing standard about these 
-			fyi!), Junior Adults Suite, Swim-Up Adults Room, Family Rooms and 
-			Suites
-          </p>
-          <h1>Food &amp; Drink</h1>
-          <p>
-            Two Main Restaurants - two packed buffet restaurants with food 
-			stations and show-cooking, the second is for Adults Only.
-          </p>
-          <p>
-            Snack Restaurant - full of all the holiday goodies, we're talking 
-			pizza, burgers and hot dogs... all the naughty stuff.
-          </p>
-          <p>
-            Beach Snack Bar - your beach day just got better with a selection of 
-			fast food bites and delicious ice cream.
-          </p>
-          <p>
-            Pool Snack Bar - poolside snacks all day long, will you ever go 
-			hungry here? Absolutely not.
-          </p>
-          <p>
-            Patisserie - the kids will be nagging to come here, it's cakes, 
-			pastries, cookies, all the sugar galore. We won't tell the dentist 
-			if you don't!
-          </p>
-          <p>
-            Seven Bars for caffeine fixes, holiday cocktails, ice-cold beer, a 
-			bit of vino, or a classic Fanta Lemon, you'll find it all here. You 
-			can even grab your normal Starbuck's order!
-          </p>
-          <h1>Sports &amp; Entertainment</h1>
-          <p>
-            Seven swimming pools - because we all need options, right? A pool 
-			for the active swimmers, pools for the kiddos to make as much splash 
-			as they want and an adults pool for a peaceful swim or little 
-			afternoon snooze
-          </p>
-          <p>
-            Aquapark - not just for the kids, there's exhilarating slides for 
-			the grown-ups too, with a racer slide, and freefall slides that'll 
-			make your stomach drop
-          </p>
-          <p>
-            Fitness centre - very high-tech so if you're gonna do a workout 
-			anywhere, it needs to be here!Iif you need a bit of motivation, 
-			there are fitness trainers that'll give you a personalised workout
-          </p>
-          <p>
-            Spa - that'll give you that 'ooooo' 'aaahhhh' feelin', 
-			pamper-yourself-silly with a trip to the sauna, steam room and 
-			Turkish Baths, with a massage or skin care treatment to finish
-          </p>
-          <h1>Entertainment:</h1>
-          <p>
-            If you're feeling active you've got Pilates, aerobics, Zumba and 
-			gymnastics
-          </p>
-          <p>
-            Get stuck into the pool games, cocktail games, bingo and quizzes
-          </p>
-          <p>
-            Evening shows four times a week, perfect for the whole family to sit 
-			and enjoy
-          </p>
-          <p>
-            X Planet Mini Club - offering a fantastic entertainment schedule for 
-			ages 1 - 8, after a day of fun the youngsters can head back at 20:30 
-			for the nightly disco
-          </p>
-          <p>
-            X Stage Shows - not your regular bingo, this is next-level 
-			entertainment, with world-class DJs, and famous singers taking to 
-			the stage, Clean Bandit took to the stage in July (yep, they aren't 
-			messing around)
-          </p>
-          <h1>THE PROGRAMME</h1>
-          <p>
-            <strong>28.04 – Day 1: </strong>arrival, check-in, accreditation, 
-			free time
-          </p>
-          <p><strong>29.04 – Day 2: </strong>free time, welcome party</p>
-          <p><strong>30.04 – Day 3: </strong>two workshops, free time, disco</p>
-          <p>
-            <strong>01.05 – Day 4: </strong>two workshops, free time, pool 
-			foam party
-          </p>
-          <p><strong>02.05 – Day 5: </strong>stage rehearsals, free time</p>
-          <p><strong>03.05 – Day 6: </strong>competition day, good-bye party</p>
-          <p><strong>04.05 – Day 7: </strong>check-out, departure</p>
-          <h1>THE PRICE</h1>
-          <table>
-            <tr>
-              <th>ULTRA ALL INCLUSIVE PACKAGE 7 DAYS / 6 NIGHTS</th>
-              <th>GUESTS</th>
-              <th>TOTAL PRICE (EUR)</th>
-              <th>ROOM TYPE</th>
-            </tr>
-            <tr>
-              <td>ADULT*</td>
-              <td>1</td>
-              <td>600</td>
-              <td>TWIN</td>
-            </tr>
-            <tr>
-              <td>ADULT + CHILD U12**</td>
-              <td>2</td>
-              <td>980</td>
-              <td>TWIN</td>
-            </tr>
-            <tr>
-              <td>ADULT + ADULT + CHILD U12</td>
-              <td>3</td>
-              <td>1400</td>
-              <td>TRIPLE</td>
-            </tr>
-            <tr>
-              <td>ADULT + CHILD U12 + CHILD U12</td>
-              <td>3</td>
-              <td>1400</td>
-              <td>TRIPLE</td>
-            </tr>
-            <tr>
-              <td>ADULT + ADULT + CHILD U12 + CHILD U12</td>
-              <td>4</td>
-              <td>2000</td>
-              <td>FAMILY</td>
-            </tr>
-          </table>
-          <p>* ADULT – all guests 12+ year old</p>
-          <p>** CHILD U12 – children under 12 year old</p>
-        </div>
-        <div
-          class="container btn-area d-flex text-center align-items-center justify-content-center"
-        >
-          <div class="row btn-area">
-            <div class="col-lg-12">
-              <div class="regul-btn">
-                <a href="https://europestage.uk/studios2025/tr/signin.asp"
-                  >COMPETE</a
+
+        <!-- Contact Information -->
+        <div class="section">
+          <div class="section-header">
+            <h2 class="section-title">Contact Us</h2>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>+37125511416</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>+37127562403</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <div>
+                <a href="http://www.space4dance.org" target="_blank"
+                  >www.space4dance.org</a
                 >
               </div>
             </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <a href="mailto:info@space4dance.org">info@space4dance.org</a>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 40px">
+            <a
+              href="http://www.space4dance.org"
+              class="apply-button"
+              target="_blank"
+            >
+              <i class="fas fa-star"></i> Apply Now
+            </a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
     <!--Footer section-->
     <footer class="footer">
       <div class="footer-content">
@@ -1219,11 +1245,7 @@ table.MsoTableGrid
         </div>
 
         <!-- Login Button -->
-        <a
-          href="#"
-          class="login-btn"
-          >Log In</a
-        >
+        <a href="#" class="login-btn">Log In</a>
 
         <!-- Footer Bottom -->
         <div class="footer-bottom">
@@ -1234,8 +1256,6 @@ table.MsoTableGrid
         </div>
       </div>
     </footer>
-    <!--Scripts-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
+	 <script src="assets/js/main.js"></script>
   </body>
 </html>
